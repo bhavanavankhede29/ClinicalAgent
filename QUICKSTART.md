@@ -11,28 +11,52 @@ every output and any patient-impacting use.
 
 ---
 
-## 1. Run it
+## 1. Run it from a fresh clone
 
 ### Prerequisites
 - **Python 3.14** (3.11+ works; `langchain-community` extras need a numpy wheel, which 3.14 lacks — the core app does not use them)
-- Windows PowerShell (the helper script is `run.ps1`); on macOS/Linux run the `uvicorn` line by hand
-- Optional: an **Anthropic API key** for LLM synthesis. Without it the app still runs in **evidence-only mode** (retrieval + provenance, no interpretation).
+- **git**
+- Optional: an **Anthropic API key** for LLM synthesis. Without it the app still runs in **evidence-only mode** (retrieval + provenance, no interpretation) — so it starts and serves with **zero configuration**.
 
-### Steps
+### What the repo does and does not ship
+| Ships in the clone | Built on first run / not in the clone |
+| --- | --- |
+| all source, the `knowledge/` RAG corpus (~1,085 docs), `data/qa.jsonl` + `data/sft_corpus.jsonl` | `.venv/` — `run.ps1` creates it |
+| `.env.example` | `.env` — you copy it (or skip for evidence-only mode) |
+| | `knowledge/.kb_index.json` — the RAG index; **auto-builds from `knowledge/` on first query** (~a few seconds, TF-IDF). Force it with `python -m api.rag`. |
+| | `data/treatment_plans.json` — approval state; created on the first "Send to doctor" |
+
+### Windows (PowerShell)
 ```powershell
 git clone https://github.com/bhavanavankhede29/ClinicalAgent
 cd ClinicalAgent
 
-# 1. configure (optional but recommended)
+# optional: configure. Skip entirely to run in evidence-only mode.
 Copy-Item .env.example .env
-#   then edit .env — set ANTHROPIC_API_KEY (and ANTHROPIC_WORKSPACE_ID if the key
-#   is identity-linked). Set a fixed SESSION_SECRET so logins survive a restart.
+#   edit .env — set ANTHROPIC_API_KEY (+ ANTHROPIC_WORKSPACE_ID if the key is
+#   identity-linked). Set a fixed SESSION_SECRET so logins survive a restart.
 
-# 2. run — creates .venv, installs requirements.txt, starts the server with --reload
+# run — creates .venv, installs requirements.txt, starts uvicorn with --reload
 .\run.ps1
 ```
 
-Open **http://127.0.0.1:8000** and sign in.
+### macOS / Linux (no `run.ps1`)
+```bash
+git clone https://github.com/bhavanavankhede29/ClinicalAgent
+cd ClinicalAgent
+python3 -m venv .venv
+.venv/bin/pip install -r requirements.txt
+cp .env.example .env            # optional; edit as above
+.venv/bin/python -m uvicorn api.main:app --host 127.0.0.1 --port 8000 --reload
+```
+
+### Verify the clone is working
+```
+GET http://127.0.0.1:8000/api/health
+```
+Expect `status: "ok"`, `knowledge_base.chunks` in the thousands (index built), and
+`mode` = `synthesis` if you set a key, else `evidence-only`. Then open
+**http://127.0.0.1:8000** and sign in.
 
 | Login | Username / password | Where | Does |
 | --- | --- | --- | --- |
@@ -84,6 +108,26 @@ that doctor's reviews from the last 24 h. State lives in one JSON file
 ---
 
 ## 3. Review the code
+
+### Reviewer's fast path
+```bash
+git clone https://github.com/bhavanavankhede29/ClinicalAgent && cd ClinicalAgent
+python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+
+# read the orchestration + safety rules first
+less api/agent.py            # SYSTEM_PROMPT, TOOLS, _llm_plan, answer guards
+
+# NO KEY — exercise retrieval + RAG deterministically
+.venv/bin/python -m api.rag                      # build + report the local index
+.venv/bin/python -m uvicorn api.main:app --port 8000     # runs in evidence-only mode
+#   → POST /api/query returns real citations + retrieval_trace, no synthesis
+
+# WITH ANTHROPIC_API_KEY set — see the full reasoning trace on the CLI, no web server
+.venv/bin/python -m api.crew "metformin use with reduced kidney function" --mode decision_support
+```
+Every retrieval function in `api/retrieval.py` is independently callable; the
+crew CLI (`api/crew.py`) prints the Planner → Researcher → Synthesist → Reviewer
+chain of thoughts plus the cited answer.
 
 ### Where to look first
 | File | What it is |
