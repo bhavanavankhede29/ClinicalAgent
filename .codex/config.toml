@@ -1,0 +1,7 @@
+[mcp_servers.clinical-agent]
+command = 'c:\Users\gradb\ClinicalAgent\.venv\Scripts\python.exe'
+args = ['c:\Users\gradb\ClinicalAgent\mcp_server.py']
+
+[mcp_servers.medical-mcp]
+command = "node"
+args = ['C:\Users\gradb\AppData\Roaming\npm\node_modules\medical-mcp\build\index.js']

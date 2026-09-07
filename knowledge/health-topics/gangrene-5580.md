@@ -1,0 +1,14 @@
+---
+source: MedlinePlus (National Library of Medicine)
+title: Gangrene
+published: 08/04/2010
+url: https://medlineplus.gov/gangrene.html
+jurisdiction: US
+category: health-topics
+---
+
+# Gangrene
+
+Gangrene is the death of tissues in your body. It happens when a part of your body loses its blood supply. Gangrene can happen on the surface of the body, such as on the skin, or inside the body, in muscles or organs. Causes include: Serious injuries Problems with blood circulation, such as atherosclerosis and peripheral arterial disease Diabetes Skin symptoms may include a blue or black color, pain, numbness, and sores that produce a foul-smelling discharge. If the gangrene is internal, you may run a fever and feel unwell, and the area may be swollen and painful. Gangrene is a serious condition. It needs immediate attention. Treatment includes surgery, antibiotics, and oxygen therapy. In severe cases an amputation may be necessary.
+
+Related MedlinePlus topic groups: Blood, Heart and Circulation.

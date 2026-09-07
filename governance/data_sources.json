@@ -1,0 +1,96 @@
+{
+  "_comment": "Registry of every data source that may feed the corpus, the training pipeline, or evaluation. training.governance validates that each dataset referenced in produced JSONL is listed here, in scope, and not expired. Add a row BEFORE using a source.",
+  "sources": [
+    {
+      "id": "openfda-druglabel",
+      "name": "openFDA drug label API / DailyMed SPL",
+      "access": "public-domain",
+      "contains_phi": false,
+      "deid_method": "n/a (no human-subject data)",
+      "agreement_ref": null,
+      "irb_protocol": null,
+      "expires": null,
+      "allowed_uses": ["rag-corpus", "training", "eval"],
+      "custodian": "FDA / NLM",
+      "notes": "Public domain U.S. government data."
+    },
+    {
+      "id": "fhir-sandbox-hapi",
+      "name": "HAPI public FHIR R4 test server",
+      "access": "public-synthetic",
+      "contains_phi": false,
+      "deid_method": "synthetic data only; server must never hold real PHI",
+      "agreement_ref": null,
+      "irb_protocol": null,
+      "expires": null,
+      "allowed_uses": ["demo", "vignette-stems"],
+      "custodian": "Smile CDR / HL7 community",
+      "notes": "Shared public sandbox. Do not point FHIR_BASE_URL at a real endpoint."
+    },
+    {
+      "id": "society-guidelines",
+      "name": "Specialty-society / national guideline PDFs (ACC/AHA, IDSA, ADA, KDIGO, GOLD, NICE, WHO)",
+      "access": "licensed-or-open",
+      "contains_phi": false,
+      "deid_method": "n/a",
+      "agreement_ref": "PER-PUBLISHER — record each publisher's licence in this row before loading",
+      "irb_protocol": null,
+      "expires": null,
+      "allowed_uses": ["rag-corpus"],
+      "custodian": "respective societies",
+      "notes": "Redistribution terms vary. Keeping the corpus local to one institution is normal."
+    },
+    {
+      "id": "systematic-reviews",
+      "name": "Systematic reviews / evidence reports (Cochrane, USPSTF, AHRQ)",
+      "access": "licensed-or-open",
+      "contains_phi": false,
+      "deid_method": "n/a",
+      "agreement_ref": "PER-PUBLISHER — record each item's licence before loading",
+      "irb_protocol": null,
+      "expires": null,
+      "allowed_uses": ["rag-corpus", "eval"],
+      "custodian": "respective publishers",
+      "notes": "USPSTF/AHRQ are public domain; Cochrane is licensed."
+    },
+    {
+      "id": "institutional-docs",
+      "name": "Institutional protocols / formulary / care pathways",
+      "access": "internal",
+      "contains_phi": false,
+      "deid_method": "n/a (policy documents, not patient data)",
+      "agreement_ref": "internal — owned by the institution",
+      "irb_protocol": null,
+      "expires": null,
+      "allowed_uses": ["rag-corpus", "training", "eval"],
+      "custodian": "FILL-IN: clinical governance committee",
+      "notes": "Confirm no embedded patient examples before loading."
+    },
+    {
+      "id": "mimic-iv",
+      "name": "MIMIC-IV (PhysioNet)",
+      "access": "credentialed",
+      "contains_phi": false,
+      "deid_method": "PhysioNet de-identification (dates shifted, ages>89 capped, identifiers removed)",
+      "agreement_ref": "FILL-IN: PhysioNet DUA + CITI cert id",
+      "irb_protocol": "FILL-IN or 'exempt per PhysioNet DUA'",
+      "expires": "FILL-IN: DUA renewal date",
+      "allowed_uses": ["training", "eval"],
+      "custodian": "MIT-LCP / PhysioNet",
+      "notes": "Not usable until agreement_ref and expires are filled."
+    },
+    {
+      "id": "institutional-ehr",
+      "name": "Institutional EHR extract",
+      "access": "restricted",
+      "contains_phi": false,
+      "deid_method": "FILL-IN: Safe Harbor OR Expert Determination (name + date + method)",
+      "agreement_ref": "FILL-IN: internal DUA id",
+      "irb_protocol": "FILL-IN: IRB #",
+      "expires": "FILL-IN",
+      "allowed_uses": ["training", "eval"],
+      "custodian": "FILL-IN: data governance office",
+      "notes": "Data must be de-identified BEFORE it reaches this repo. training.deident.verify() enforces record-level checks; it is not a substitute for a documented de-identification."
+    }
+  ]
+}

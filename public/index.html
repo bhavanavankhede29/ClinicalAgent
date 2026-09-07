@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clinical Reference Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="disclaimer">
+    <strong>⚕ Clinical Reference Assistant</strong> — For licensed healthcare professionals. Not a diagnostic tool
+    and not a substitute for clinical judgment. Verify all information against current prescribing data before use.
+  </header>
+
+  <main class="chat" id="chat"></main>
+
+  <form class="composer" id="composer">
+    <textarea
+      id="input"
+      placeholder="e.g. Dosage and interactions for metformin; recent literature on GLP-1 agonists…"
+      rows="2"
+      autofocus
+    ></textarea>
+    <button type="submit" id="send">Send</button>
+  </form>
+
+  <script src="app.js"></script>
+</body>
+</html>

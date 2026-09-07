@@ -1,0 +1,16 @@
+---
+source: MedlinePlus (National Library of Medicine)
+title: Rosacea
+published: 06/29/2000
+url: https://medlineplus.gov/rosacea.html
+jurisdiction: US
+category: health-topics
+---
+
+# Rosacea
+
+Also called: Acne rosacea.
+
+Rosacea is a long-term disease that affects your skin and sometimes your eyes. It causes redness and pimples. Rosacea is most common in women and people with fair skin. It most often affects middle-aged and older adults. In most cases, rosacea only affects the face. Symptoms can include: Frequent redness of the face, or flushing Small, red lines under the skin Acne A swollen nose Thick skin, usually on the forehead, chin, and cheeks Red, dry, itchy eyes and sometimes vision problems No one knows what causes rosacea. You may be more likely to have it if you blush a lot or if rosacea runs in your family. Rosacea is not dangerous. There is no cure, but treatments can help. They include medicines and sometimes surgery. NIH: National Institute of Arthritis and Musculoskeletal and Skin Diseases
+
+Related MedlinePlus topic groups: Skin, Hair and Nails.

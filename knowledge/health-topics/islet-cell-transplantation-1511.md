@@ -1,0 +1,14 @@
+---
+source: MedlinePlus (National Library of Medicine)
+title: Islet Cell Transplantation
+published: 08/07/2001
+url: https://medlineplus.gov/isletcelltransplantation.html
+jurisdiction: US
+category: health-topics
+---
+
+# Islet Cell Transplantation
+
+What are islets? Islets are groups of cells in your pancreas . The pancreas is a gland behind your stomach. It makes hormones that control your blood glucose , also called blood sugar. Islets are made up of several types of cells. One type is beta cells. Beta cells make a hormone called insulin. Insulin helps your cells take in glucose and keeps your blood glucose at a healthy level. In type 1 diabetes , your immune system attacks and destroys beta cells. This means your pancreas can no longer make insulin. Without insulin, blood glucose rises to dangerous levels. You must take insulin every day to stay alive. What is islet cell transplantation? Islet cell transplantation uses healthy islets from a donor to replace the destroyed cells in a person with type 1 diabetes. The transplanted beta cells may begin making insulin. This could reduce or eliminate the need for daily insulin shots. The U.S. Food and Drug Administration (FDA) approved islet cell transplantation in 2023. Before that, it was only available in research studies. Islet cell transplantation is not the same as a full pancreas transplant . How is islet cell transplantation done? Healthy beta cells are moved from the pancreas of a person who has died and agreed to donate their organs. The islets are then injected into a large vein in your abdomen (belly) that leads to your liver. Once there, these islets begin to make and release insulin. More than one treatment may be needed to get enough working beta cells. What does islet cell transplantation treat? Islet cell transplantation is approved only for certain adults with type 1 diabetes whose blood glucose is very hard to control, even with careful daily management. If you qualify, it may help with: Better blood glucose control Less need for daily insulin shots or no longer needing them Better ability to feel warning signs of low blood glucose Better quality of life Talk with your health care provider about whether this treatment is right for you. They will review the benefits and risks. One risk is that you must take medicines called immunosuppressants for the rest of your life. These medicines stop your immune system from attacking the new cells. But they also weaken your immune system, which raises your risk of infections and other serious side effects. Not everyone with type 1 diabetes is a good fit for this treatment. If you have certain health conditions, a weakened immune system or take certain medicines, this treatment may not be a good fit for you. NIH: National Institute of Diabetes and Digestive and Kidney Diseases
+
+Related MedlinePlus topic groups: Digestive System; Endocrine System; Transplantation and Donation.

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Clinical Agent Console</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" />
+  <link rel="stylesheet" href="styles.css?v=34" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 3v6m0 0 4.5 7.8a2 2 0 0 1-1.7 3H9.2a2 2 0 0 1-1.7-3L12 9Z" />
+          <path d="M7 3h10" />
+        </svg>
+      </span>
+      <span class="brand__name">Clinical Agent</span>
+      <span class="brand__sub">retrieval-grounded decision support</span>
+    </div>
+    <div class="topbar__status">
+      <span id="engine-pill" class="pill pill--muted" title="Response engine">
+        <span class="pill__dot"></span><span id="engine-label">checking…</span>
+      </span>
+      <span id="review-pill" class="pill pill--caution" title="Human review state">
+        <span class="pill__dot"></span><span id="review-label">Review pending</span>
+      </span>
+      <button id="rail-toggle" class="ghost-btn" type="button" aria-expanded="false">Evidence</button>
+      <a id="approvals-link" class="ghost-btn" href="/approvals" title="Doctor-approved treatment plans">Approvals</a>
+      <button id="theme-toggle" class="ghost-btn ghost-btn--icon" type="button" title="Toggle theme" aria-label="Toggle colour theme">◐</button>
+      <button id="signout" class="ghost-btn" type="button" title="Sign out">Sign out</button>
+    </div>
+  </header>
+
+  <div class="safety-strip" role="note">
+    <strong>Decision support only.</strong> Outputs are drawn from live external sources and may be incomplete or out of date.
+    A licensed clinician must review every output against current guidance before any patient-impacting action.
+  </div>
+
+  <main class="workspace">
+    <!-- LEFT: patient context (synthetic FHIR sandbox) + approval tracker -->
+    <aside class="rail rail--left" aria-label="Patient context">
+      <div class="rail__section">
+        <h2 class="rail__title">Patient</h2>
+        <div class="pt-mode" role="tablist">
+          <button id="pt-mode-fhir" class="pt-mode__btn is-active" type="button">FHIR sandbox</button>
+          <button id="pt-mode-manual" class="pt-mode__btn" type="button">Manual entry</button>
+        </div>
+
+        <div id="pt-fhir" class="pt-panel">
+          <form id="fhir-search" class="fhir-search">
+            <input id="fhir-name" type="search" placeholder="Search by name, e.g. Smith" autocomplete="off" />
+            <button type="submit" class="ghost-btn">Find</button>
+          </form>
+          <ul id="fhir-results" class="fhir-results"></ul>
+          <div id="fhir-selected" class="fhir-selected" hidden></div>
+          <p class="rail__note">Selecting a patient sends their problem list, medications, and recent results with every query. Synthetic data only.</p>
+        </div>
+
+        <div id="pt-manual" class="pt-panel" hidden>
+          <form id="manual-form" class="manual-form">
+            <label>Name / label
+              <input id="m-name" type="text" autocomplete="off" placeholder="initials or a de-identified label" />
+            </label>
+            <div class="manual-row">
+              <label>Age
+                <input id="m-age" type="text" inputmode="numeric" autocomplete="off" placeholder="38" />
+              </label>
+              <label>Sex
+                <select id="m-sex">
+                  <option value=""></option><option>female</option><option>male</option><option>other</option>
+                </select>
+              </label>
+            </div>
+            <label>Presenting complaint / symptoms
+              <textarea id="m-symptoms" rows="3" placeholder="e.g. 3 days of cough, rhinorrhoea, chills; no fever. No PHI."></textarea>
+            </label>
+            <label>Current medications
+              <textarea id="m-meds" rows="2" placeholder="e.g. lisinopril 10 mg daily"></textarea>
+            </label>
+            <label>Allergies
+              <input id="m-allergies" type="text" autocomplete="off" placeholder="e.g. penicillin" />
+            </label>
+            <label>Relevant history / results
+              <textarea id="m-history" rows="2" placeholder="e.g. eGFR 52, type 2 diabetes"></textarea>
+            </label>
+            <div class="manual-actions">
+              <button type="submit" class="send-btn">Apply patient</button>
+              <button type="button" id="m-clear" class="ghost-btn">Clear</button>
+            </div>
+          </form>
+          <div id="manual-applied" class="fhir-selected" hidden></div>
+          <p class="rail__note">Described by hand — no FHIR record is attached, so nothing from a previously selected patient carries over. Do not enter names or other PHI.</p>
+        </div>
+      </div>
+
+      <div class="rail__section rail__section--tracker">
+        <h2 class="rail__title">Sent for approval
+          <button id="tracker-refresh" class="rail__hint rail__hint--btn" type="button" title="Refresh">↻</button>
+        </h2>
+        <ul id="approval-tracker" class="approval-tracker"></ul>
+        <a class="rail__note rail__note--link" href="/approvals">Open the approvals page →</a>
+      </div>
+    </aside>
+
+    <!-- CENTRE: conversation, with a quick treatment-plan action above the composer -->
+    <section class="conversation" aria-label="Consultation transcript">
+      <div id="transcript" class="transcript">
+        <div id="empty-state" class="empty-state">
+          <h1>Ask a clinical question</h1>
+          <ul id="examples" class="examples"></ul>
+        </div>
+      </div>
+
+      <form id="composer" class="composer">
+        <textarea id="query" class="composer__input" rows="2" autofocus
+          placeholder="Query the current evidence base…"></textarea>
+        <div class="composer__row">
+          <button id="plan-generate" class="send-btn" type="button" title="No patient selected.">Generate treatment plan</button>
+          <div class="composer__actions">
+            <span id="composer-mode" class="composer__mode" hidden>Comprehensive review</span>
+            <label class="deep-toggle" title="Explore several approaches, score each against the retrieved evidence, then synthesise the best. Slower — ~45s, more model calls.">
+              <input type="checkbox" id="deep-reasoning" />
+              <span>Deep reasoning</span>
+            </label>
+            <button id="send" class="send-btn" type="submit">Detailed References</button>
+          </div>
+        </div>
+      </form>
+    </section>
+
+    <!-- RIGHT: evidence + trace -->
+    <aside id="evidence-rail" class="rail rail--right" aria-label="Evidence and retrieval trace">
+      <div class="rail__tabs" role="tablist">
+        <button class="rail__tab is-active" data-tab="evidence" role="tab" aria-selected="true">Evidence</button>
+        <button class="rail__tab" data-tab="trace" role="tab" aria-selected="false">Retrieval trace</button>
+      </div>
+      <div id="tab-evidence" class="rail__body" role="tabpanel">
+        <p class="rail__placeholder">Sources for your most recent query appear here, newest first.</p>
+      </div>
+      <div id="tab-trace" class="rail__body is-hidden" role="tabpanel">
+        <p class="rail__placeholder">Each retrieval step — the API called, parameters, result count, and latency — is logged here.</p>
+      </div>
+    </aside>
+  </main>
+
+  <div id="rail-scrim" class="rail-scrim" hidden></div>
+  <script src="app.js?v=47"></script>
+</body>
+</html>

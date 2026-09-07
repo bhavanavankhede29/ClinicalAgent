@@ -1,0 +1,16 @@
+---
+source: MedlinePlus (National Library of Medicine)
+title: Hernia
+published: 11/23/1999
+url: https://medlineplus.gov/hernia.html
+jurisdiction: US
+category: health-topics
+---
+
+# Hernia
+
+Also called: Enterocele.
+
+A hernia happens when part of an internal organ or tissue bulges through a weak area of muscle. Most hernias are in the abdomen. There are several types of hernias, including: Inguinal, in the groin. This is the the most common type. Umbilical, around the belly button Incisional, through a scar Hiatal , a small opening in the diaphragm that allows the upper part of the stomach to move up into the chest. Congenital diaphragmatic, a birth defect that needs surgery Hernias are common. They can affect men, women, and children. A combination of muscle weakness and straining, such as with heavy lifting, might contribute. Some people are born with weak abdominal muscles and may be more likely to get a hernia. Treatment is usually surgery to repair the opening in the muscle wall. Untreated hernias can cause pain and health problems.
+
+Related MedlinePlus topic groups: Digestive System.

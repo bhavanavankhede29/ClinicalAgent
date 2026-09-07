@@ -1,0 +1,14 @@
+---
+source: MedlinePlus (National Library of Medicine)
+title: Acupuncture
+published: 01/13/2003
+url: https://medlineplus.gov/acupuncture.html
+jurisdiction: US
+category: health-topics
+---
+
+# Acupuncture
+
+Acupuncture has been practiced in China and other Asian countries for thousands of years. Acupuncture involves stimulating specific points on the body. This is most often done by inserting thin needles through the skin, to cause a change in the physical functions of the body. Research has shown that acupuncture reduces nausea and vomiting after surgery and chemotherapy. It can also relieve pain. Researchers don't fully understand how acupuncture works. It might aid the activity of your body's pain-killing chemicals. It also might affect how you release chemicals that regulate blood pressure and flow. NIH: National Center for Complementary and Integrative Health
+
+Related MedlinePlus topic groups: Complementary and Alternative Therapies.

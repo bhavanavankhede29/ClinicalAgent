@@ -1,0 +1,16 @@
+---
+source: MedlinePlus (National Library of Medicine)
+title: Dietary Fats
+published: 09/02/2003
+url: https://medlineplus.gov/dietaryfats.html
+jurisdiction: US
+category: health-topics
+---
+
+# Dietary Fats
+
+Also called: Lipids; Monounsaturated fat; Polyunsaturated fat; Saturated fat.
+
+Fat is a type of nutrient. You need some fat in your diet but not too much. Fats give you energy and help your body absorb vitamins. Dietary fat also plays a major role in your cholesterol levels . But not all fats are the same. You should try to avoid: Saturated fats such as butter, solid shortening, and lard Trans fats. These are found in vegetable shortenings, some margarines, crackers, cookies, snack foods, and other foods made with or fried in partially hydrogenated oils (PHOs). By 2018, most U.S. companies will not be allowed to add PHOs to food. Try to replace them with oils such as canola, olive, safflower, sesame, or sunflower. Of course, eating too much fat will put on the pounds. Fat has twice as many calories as proteins or carbohydrates. NIH: National Heart, Lung, and Blood Institute
+
+Related MedlinePlus topic groups: Food and Nutrition.

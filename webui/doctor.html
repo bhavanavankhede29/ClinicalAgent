@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Treatment Plan Review · Doctor portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" />
+  <style>
+    :root {
+      --bg:#f2f6f4; --surface:#ffffff; --surface-2:#eef4f0; --ink:#14202e; --ink-soft:#4d5b6a;
+      --ink-faint:#7c8a99; --line:#dce6e0; --line-strong:#c1d1c8;
+      --accent:#1f7a5a; --accent-strong:#175f46; --accent-soft:#e3f1eb;
+      --warn:#b7791f; --warn-soft:#fbf0dd; --ok:#1f7a5a; --ok-soft:#e3f1eb;
+      --radius:10px; --radius-sm:7px;
+    }
+    * { box-sizing:border-box; }
+    html,body { margin:0; height:100%; }
+    body {
+      font-family:"Hanken Grotesk","Segoe UI",system-ui,sans-serif;
+      background:var(--bg); color:var(--ink); display:flex; flex-direction:column; height:100%;
+    }
+    header {
+      display:flex; align-items:center; gap:.7rem; padding:.7rem 1.1rem;
+      background:var(--surface); border-bottom:1px solid var(--line);
+    }
+    header .mark { color:var(--accent); display:flex; }
+    header .avatar { width:46px; height:46px; flex:none; display:block; border-radius:50%; object-fit:cover; border:1px solid #c9d6e4; }
+    header h1 { font:600 1.02rem/1 "Source Serif 4",Georgia,serif; margin:0; }
+    header .sub { color:var(--ink-faint); font-size:.78rem; }
+    header .spacer { flex:1; }
+    .ghost {
+      border:1px solid var(--line-strong); background:var(--surface); color:var(--ink-soft);
+      border-radius:var(--radius-sm); padding:.35rem .7rem; font:inherit; font-size:.8rem;
+      font-weight:600; cursor:pointer;
+    }
+    .ghost:hover { border-color:var(--accent); color:var(--accent); }
+    main { flex:1; display:grid; grid-template-columns:320px minmax(0,1fr); min-height:0; }
+    .queue { border-right:1px solid var(--line); background:var(--surface); overflow-y:auto; }
+    .queue h2 {
+      margin:0; padding:.8rem 1rem .5rem; font-size:.72rem; font-weight:700;
+      letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint);
+    }
+    .queue ul { list-style:none; margin:0; padding:0 .6rem .8rem; }
+    .queue li { margin-bottom:.35rem; }
+    .queue button {
+      width:100%; text-align:left; border:1px solid var(--line); background:var(--surface);
+      color:var(--ink); border-radius:var(--radius-sm); padding:.55rem .6rem; cursor:pointer; font:inherit;
+    }
+    .queue button:hover { border-color:var(--accent); background:var(--accent-soft); }
+    .queue button.active { border-color:var(--accent); background:var(--accent-soft); }
+    .queue .pt { font-weight:600; font-size:.85rem; }
+    .queue .meta { display:block; font-size:.72rem; color:var(--ink-faint); margin-top:.15rem; }
+    .badge {
+      display:inline-block; font-size:.64rem; font-weight:700; text-transform:uppercase;
+      letter-spacing:.05em; padding:.1rem .4rem; border-radius:999px; margin-top:.3rem;
+    }
+    .badge.pending { background:var(--warn-soft); color:var(--warn); }
+    .badge.changes { background:var(--warn-soft); color:var(--warn); }
+    .detail { overflow-y:auto; padding:1.4rem clamp(1rem,4vw,2.4rem); }
+    .detail .empty { color:var(--ink-faint); margin-top:3rem; text-align:center; }
+    .plan-head { margin-bottom:1rem; }
+    .plan-head .q { font-size:1.05rem; font-weight:600; }
+    .plan-head .m { font-size:.78rem; color:var(--ink-faint); margin-top:.2rem; }
+    .prose { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+      padding:1rem 1.2rem; line-height:1.6; font-size:.92rem; }
+    .prose h2 { font-size:1rem; margin:1.1rem 0 .4rem; color:var(--accent-strong); }
+    .prose h3, .prose h4 { font-size:.9rem; margin:.9rem 0 .3rem; color:var(--accent-strong); }
+    .prose h2:first-child, .prose h3:first-child { margin-top:0; }
+    .prose .crit { color:#c23b3b; font-weight:700; }
+    .prose li.crit, .prose p.crit { color:#c23b3b; background:#f8e3e3; border-left:3px solid #c23b3b; padding:.2rem .5rem; border-radius:4px; }
+    .prose ul,.prose ol { margin:.3rem 0 .6rem 1.2rem; padding:0; }
+    .prose li { margin:.15rem 0; }
+    .prose code { background:var(--surface-2); padding:.05rem .3rem; border-radius:4px; font-size:.85em; }
+    .cite { color:var(--accent); font-weight:600; font-size:.82em; }
+    .sources { margin:1rem 0 0; font-size:.8rem; }
+    .sources h3 { font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-faint); margin:0 0 .3rem; }
+    .sources ol { margin:0 0 0 1.2rem; padding:0; color:var(--ink-soft); }
+    .sources a { color:var(--accent); }
+    .review { margin-top:1.3rem; background:var(--surface); border:1px solid var(--line);
+      border-radius:var(--radius); padding:1rem 1.2rem; }
+    .review h3 { margin:0 0 .5rem; font-size:.85rem; }
+    textarea {
+      width:100%; min-height:5rem; resize:vertical; font:inherit; font-size:.88rem;
+      border:1px solid var(--line-strong); border-radius:var(--radius-sm); padding:.6rem .7rem;
+      background:var(--surface); color:var(--ink);
+    }
+    textarea:focus-visible { outline:2px solid var(--accent); outline-offset:1px; border-color:var(--accent); }
+    .actions { display:flex; gap:.6rem; margin-top:.7rem; flex-wrap:wrap; }
+    .btn { border:none; border-radius:var(--radius-sm); padding:.55rem 1.1rem; font:inherit;
+      font-weight:600; font-size:.86rem; cursor:pointer; }
+    .btn.approve { background:var(--accent); color:#fff; }
+    .btn.approve:hover { background:var(--accent-strong); }
+    .btn.changes { background:var(--warn-soft); color:var(--warn); }
+    .btn.changes:hover { filter:brightness(.96); }
+    .btn.reject { background:#f8e3e3; color:#c23b3b; }
+    .btn.reject:hover { filter:brightness(.97); }
+    .btn:disabled { opacity:.55; cursor:progress; }
+    .flash { margin-top:.6rem; font-size:.82rem; color:var(--accent-strong); }
+    .flash.err { color:var(--critical, #c23b3b); }
+    .admin-reply {
+      background:var(--warn-soft); border:1px solid #e6d4ad; border-radius:var(--radius);
+      padding:.8rem 1rem; margin-bottom:1rem; font-size:.9rem;
+    }
+    .admin-reply h3 { margin:0 0 .3rem; font-size:.74rem; letter-spacing:.06em; text-transform:uppercase; color:var(--warn); }
+    .admin-reply .who { font-size:.76rem; color:var(--ink-faint); margin-top:.3rem; }
+    .thread { margin:1rem 0; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; }
+    .thread h3 { margin:0; padding:.5rem .8rem; background:var(--surface-2); font-size:.72rem;
+      letter-spacing:.08em; text-transform:uppercase; color:var(--ink-faint); }
+    .thread__item { padding:.55rem .8rem; border-top:1px solid var(--line); font-size:.85rem; }
+    .thread__item:first-of-type { border-top:none; }
+    .thread__who { font-weight:600; font-size:.76rem; }
+    .thread__who.doctor { color:var(--accent-strong); }
+    .thread__who.admin { color:var(--warn); }
+    .thread__when { color:var(--ink-faint); font-size:.7rem; margin-left:.4rem; }
+    .thread__note { margin-top:.2rem; color:var(--ink-soft); white-space:pre-wrap; }
+    .cmt-edit { font-size:.7rem; color:var(--accent-strong); margin-left:.4rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="avatar" src="/doctors_img.png" alt="Doctor" onerror="this.remove()" />
+    <div>
+      <h1>Treatment Plan Review</h1>
+      <div class="sub">Doctor portal — <span id="whoami">…</span></div>
+    </div>
+    <span class="spacer"></span>
+    <button class="ghost" id="refresh" type="button">Refresh</button>
+    <button class="ghost" id="signout" type="button">Sign out</button>
+  </header>
+
+  <main>
+    <aside class="queue">
+      <h2>Awaiting review</h2>
+      <ul id="queue"></ul>
+      <h2>Reviewed · last 24h</h2>
+      <ul id="recent"></ul>
+    </aside>
+    <section class="detail" id="detail">
+      <p class="empty">Select a plan on the left to review it.</p>
+    </section>
+  </main>
+
+  <script>
+    const esc = (s) => String(s == null ? "" : s)
+      .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+
+    const CRIT_CUE = /^(?:[⚠❗🚨]️?\s*)|^\s*\**\s*(?:contraindicat|boxed warning|black[- ]box|do not (?:use|give|co-?administer|combine)|avoid\b|never (?:use|give|combine)|red[- ]flag|life[- ]threatening|fatal\b|serious (?:risk|harm)|danger\b)/i;
+    function md(src) {
+      const inline = (s) => esc(s)
+        .replace(/\*\*([^*]+)\*\*/g,(_m,t)=>CRIT_CUE.test(t)?`<strong class="crit">${t}</strong>`:`<strong>${t}</strong>`)
+        .replace(/`([^`]+)`/g,"<code>$1</code>")
+        .replace(/([⚠❗🚨]️?\s*[^.;\n]*[.;]?)/gu,'<span class="crit">$1</span>')
+        .replace(/\[(\d+(?:\s*,\s*\d+)*)\]/g,'<span class="cite">[$1]</span>');
+      const cc = (t) => CRIT_CUE.test(t) ? ' class="crit"' : "";
+      const lines = String(src||"").replace(/\r/g,"").split("\n");
+      let html="", list=null;
+      const close=()=>{ if(list){ html+=`</${list}>`; list=null; } };
+      for (const raw of lines) {
+        const line = raw.trimEnd();
+        if (!line.trim()) { close(); continue; }
+        let m;
+        if ((m=line.match(/^(#{2,4})\s+(.*)$/))) { close(); const l=Math.min(m[1].length,3); html+=`<h${l}>${inline(m[2])}</h${l}>`; }
+        else if ((m=line.match(/^\s*[-*]\s+(.*)$/))) { if(list!=="ul"){close();list="ul";html+="<ul>";} html+=`<li${cc(m[1])}>${inline(m[1])}</li>`; }
+        else if ((m=line.match(/^\s*\d+\.\s+(.*)$/))) { if(list!=="ol"){close();list="ol";html+="<ol>";} html+=`<li${cc(m[1])}>${inline(m[1])}</li>`; }
+        else { close(); html+=`<p${cc(line)}>${inline(line)}</p>`; }
+      }
+      close();
+      return html;
+    }
+
+    const qEl = document.getElementById("queue");
+    const rEl = document.getElementById("recent");
+    const dEl = document.getElementById("detail");
+    let plans = [], currentId = null, currentUser = null;
+
+    const REVIEW_BADGE = {
+      "approved": ["approved", "pending"],
+      "requested changes": ["changes", "changes"],
+      "rejected": ["rejected", "changes"],
+    };
+
+    async function loadRecent() {
+      try {
+        const data = await api("/api/review/my-reviews");
+        const revs = data.reviews || [];
+        rEl.innerHTML = revs.length ? "" :
+          `<li style="padding:.4rem .6rem;color:var(--ink-faint);font-size:.8rem">No reviews in the last 24 hours.</li>`;
+        for (const r of revs) {
+          const [txt] = REVIEW_BADGE[r.action] || [r.action, "pending"];
+          const li = document.createElement("li");
+          const b = document.createElement("button");
+          b.type = "button";
+          b.innerHTML = `<span class="pt">${esc(r.patient_label || "(no patient)")}</span>
+            <span class="meta">${esc(txt)} · ${esc((r.at||"").slice(0,16).replace("T"," "))}</span>
+            <span class="meta">now: ${esc(r.current_status)}</span>`;
+          b.addEventListener("click", () => openPlan(r.plan_id));
+          li.appendChild(b);
+          rEl.appendChild(li);
+        }
+      } catch (_) { /* keep prior */ }
+    }
+
+    // Read-only on the doctor side: admin comments are shown for context; the
+    // doctor replies through the "Your review" section, not here.
+    function comments(list) {
+      const admin = (list || []).filter(c => c.role === "admin");
+      if (!admin.length) return "";
+      const rows = admin.map(c => `
+        <div class="thread__item">
+          <span class="thread__who admin">${esc(c.by)} (admin)</span>
+          <span class="thread__when">${esc((c.at||"").slice(0,16).replace("T"," "))}${c.edited_at ? " · edited" : ""}</span>
+          <div class="thread__note">${esc(c.text)}</div>
+        </div>`).join("");
+      return `<div class="thread"><h3>Comments from the admin</h3>${rows}</div>`;
+    }
+
+    async function api(path, opts) {
+      const res = await fetch(path, opts);
+      if (res.status === 401) { window.location.href = "/doctor"; throw new Error("auth"); }
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.detail || `Request failed (${res.status})`);
+      return data;
+    }
+
+    async function loadQueue() {
+      const data = await api("/api/review/plans");
+      plans = data.plans || [];
+      qEl.innerHTML = "";
+      if (!plans.length) { qEl.innerHTML = `<li style="padding:.4rem .6rem;color:var(--ink-faint);font-size:.82rem">Nothing awaiting review.</li>`; return; }
+      for (const p of plans) {
+        const li = document.createElement("li");
+        const b = document.createElement("button");
+        if (p.id === currentId) b.className = "active";
+        const cls = p.status === "changes_requested" ? "changes" : "pending";
+        const label = p.status === "changes_requested" ? "changes requested" : "pending review";
+        b.innerHTML = `<span class="pt">${esc(p.patient_label)}</span>
+          <span class="meta">${esc(p.query.slice(0,80))}${p.query.length>80?"…":""}</span>
+          <span class="meta">${esc(p.created_at.slice(0,16).replace("T"," "))} · by ${esc(p.created_by)}</span>
+          <span class="badge ${cls}">${label}</span>`;
+        b.addEventListener("click", () => openPlan(p.id));
+        li.appendChild(b);
+        qEl.appendChild(li);
+      }
+    }
+
+    function thread(history) {
+      if (!history || !history.length) return "";
+      const rows = history.map(h => `
+        <div class="thread__item">
+          <span class="thread__who ${esc(h.role)}">${esc(h.actor)} (${esc(h.role)})</span>
+          <span class="thread__when">${esc((h.at||"").slice(0,16).replace("T"," "))}</span>
+          — ${esc(h.action)}
+          ${h.note ? `<div class="thread__note">${esc(h.note)}</div>` : ""}
+        </div>`).join("");
+      return `<div class="thread"><h3>Review history</h3>${rows}</div>`;
+    }
+
+    async function openPlan(id) {
+      currentId = id;
+      await loadQueue();
+      const p = await api(`/api/review/plans/${id}`);
+      const srcs = (p.citations || []).map(c =>
+        `<li>${esc(c.title)} — ${esc(c.source)}${c.url ? ` · <a href="${esc(c.url)}" target="_blank" rel="noopener">link</a>` : ""}</li>`
+      ).join("");
+      const adminReply = p.admin_response ? `
+        <div class="admin-reply">
+          <h3>Admin responded — re-review requested</h3>
+          <div>${esc(p.admin_response)}</div>
+          <div class="who">${esc(p.admin_responded_by || "admin")} · ${esc((p.admin_responded_at||"").slice(0,16).replace("T"," "))}</div>
+        </div>` : "";
+      dEl.innerHTML = `
+        <div class="plan-head">
+          <div class="q">${esc(p.query)}</div>
+          <div class="m">${esc(p.patient_label || "no patient linked")} · generated ${esc(p.created_at.slice(0,16).replace("T"," "))} by ${esc(p.created_by)}</div>
+        </div>
+        ${adminReply}
+        <div class="prose">${md(p.answer_markdown)}</div>
+        ${srcs ? `<div class="sources"><h3>Cited sources</h3><ol>${srcs}</ol></div>` : ""}
+        ${comments(p.comments)}
+        ${thread(p.history)}
+        <div class="review">
+          <h3>Your review</h3>
+          <textarea id="notes" placeholder="Notes for the record — corrections, caveats, conditions of approval, or your reason for rejecting (a reason is required to reject)"></textarea>
+          <div class="actions">
+            <button class="btn approve" id="approve" type="button">Approve</button>
+            <button class="btn changes" id="reqchanges" type="button">Request changes</button>
+            <button class="btn reject" id="reject" type="button">Reject</button>
+          </div>
+          <div class="flash" id="flash"></div>
+        </div>`;
+      document.getElementById("approve").addEventListener("click", () => submit("approve"));
+      document.getElementById("reqchanges").addEventListener("click", () => submit("request_changes"));
+      document.getElementById("reject").addEventListener("click", () => submit("reject"));
+    }
+
+    async function submit(decision) {
+      const notes = document.getElementById("notes").value.trim();
+      const flash = document.getElementById("flash");
+      if (decision === "reject" && !notes) {
+        flash.className = "flash err";
+        flash.textContent = "Add a reason in the notes box before rejecting.";
+        return;
+      }
+      const btns = dEl.querySelectorAll(".btn");
+      btns.forEach(b => b.disabled = true);
+      flash.className = "flash"; flash.textContent = "Saving…";
+      try {
+        await api(`/api/review/plans/${currentId}/review`, {
+          method: "POST", headers: { "content-type": "application/json" },
+          body: JSON.stringify({ decision, notes }),
+        });
+        flash.textContent = decision === "approve"
+          ? "Approved and sent to admin for final review."
+          : decision === "reject"
+          ? "Plan rejected. The admin can see your reason."
+          : "Sent back with your requested changes.";
+        currentId = null;
+        setTimeout(() => { dEl.innerHTML = `<p class="empty">Select a plan on the left to review it.</p>`; }, 900);
+        await loadQueue();
+        await loadRecent();
+      } catch (e) {
+        flash.className = "flash err"; flash.textContent = e.message || "Failed to save.";
+        btns.forEach(b => b.disabled = false);
+      }
+    }
+
+    document.getElementById("refresh").addEventListener("click", () => { loadQueue(); loadRecent(); });
+    document.getElementById("signout").addEventListener("click", async () => {
+      try { await fetch("/api/logout", { method: "POST" }); } catch (_) {}
+      window.location.href = "/";
+    });
+
+    (async () => {
+      try {
+        const me = await api("/api/me");
+        currentUser = me.user;
+        document.getElementById("whoami").textContent = me.user;
+        if (me.role !== "doctor") { window.location.href = "/"; return; }
+      } catch (_) { return; }
+      loadQueue();
+      loadRecent();
+    })();
+  </script>
+</body>
+</html>

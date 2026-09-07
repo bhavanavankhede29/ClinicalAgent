@@ -1,0 +1,16 @@
+---
+source: MedlinePlus (National Library of Medicine)
+title: Bleeding Disorders
+published: 11/03/1999
+url: https://medlineplus.gov/bleedingdisorders.html
+jurisdiction: US
+category: health-topics
+---
+
+# Bleeding Disorders
+
+Also called: Clotting disorders.
+
+Normally, if you get hurt, your body forms a blood clot to stop the bleeding . For blood to clot, your body needs cells called platelets and proteins known as clotting factors. If you have a bleeding disorder, you either do not have enough platelets or clotting factors or they don't work the way they should. Bleeding disorders can be the result of other diseases, such as severe liver disease or a lack of vitamin K . They can also be inherited. Hemophilia is an inherited bleeding disorder. Bleeding disorders can also be a side effect of medicines such as blood thinners . Various blood tests can check for a bleeding disorder. You will also have a physical exam and history. Treatments depend on the cause. They may include medicines and transfusions of blood , platelets, or clotting factor.
+
+Related MedlinePlus topic groups: Blood, Heart and Circulation.

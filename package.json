@@ -1,0 +1,17 @@
+{
+  "name": "clinical-assistant",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local web-based clinical reference assistant: Claude + live FDA, PubMed, and RxNorm lookups",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "clinical-agent": {
+      "command": "c:\\Users\\gradb\\ClinicalAgent\\.venv\\Scripts\\python.exe",
+      "args": ["c:\\Users\\gradb\\ClinicalAgent\\mcp_server.py"],
+      "env": {}
+    }
+  }
+}

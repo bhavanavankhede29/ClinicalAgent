@@ -1,0 +1,16 @@
+---
+source: MedlinePlus (National Library of Medicine)
+title: Skin Pigmentation Disorders
+published: 11/10/1999
+url: https://medlineplus.gov/skinpigmentationdisorders.html
+jurisdiction: US
+category: health-topics
+---
+
+# Skin Pigmentation Disorders
+
+Also called: Hyperpigmentation; Hypopigmentation.
+
+Pigmentation means coloring. Skin pigmentation disorders affect the color of your skin. Your skin gets its color from a pigment called melanin. Special cells in the skin make melanin. When these cells become damaged or unhealthy, it affects melanin production. Some pigmentation disorders affect just patches of skin. Others affect your entire body. If your body makes too much melanin, your skin gets darker. Pregnancy, Addison's disease, and sun exposure all can make your skin darker. If your body makes too little melanin, your skin gets lighter. Vitiligo is a condition that causes patches of light skin. Albinism is a genetic condition affecting a person's skin. A person with albinism may have no color, lighter than normal skin color, or patchy missing skin color. Infections, blisters and burns can also cause lighter skin.
+
+Related MedlinePlus topic groups: Skin, Hair and Nails.

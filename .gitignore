@@ -1,0 +1,44 @@
+# ---- secrets ----
+*.key
+.env
+.env.*
+!.env.example
+
+# ---- Python ----
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ---- Node ----
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# ---- generated / runtime state ----
+knowledge/.kb_index.json
+knowledge/**/*.kb_index.json
+data/treatment_plans.json
+build/
+output/
+monitoring/requests.jsonl
+monitoring/*.jsonl
+governance/datasheets/
+*.log
+
+# ---- local editor backups / assets ----
+webui/*_original.png
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
+*~

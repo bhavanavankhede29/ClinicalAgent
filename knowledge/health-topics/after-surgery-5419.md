@@ -1,0 +1,16 @@
+---
+source: MedlinePlus (National Library of Medicine)
+title: After Surgery
+published: 04/12/2010
+url: https://medlineplus.gov/aftersurgery.html
+jurisdiction: US
+category: health-topics
+---
+
+# After Surgery
+
+Also called: Postoperative care; Recovery from surgery.
+
+After any operation , you'll have some side effects. There is usually some pain with surgery. There may also be swelling and soreness around the area that the surgeon cut. Your surgeon can tell you which side effects to expect. There can also be complications. These are unplanned events linked to the operation. Some complications are infection, too much bleeding, reaction to anesthesia , or accidental injury. Some people have a greater risk of complications because of other medical conditions. Your surgeon can tell you how you might feel and what you will be able to do - or not do - the first few days, weeks, or months after surgery. Some other questions to ask are: How long you will be in the hospital What kind of supplies, equipment, and help you might need when you go home When you can go back to work When it is ok to start exercising again Are there any other restrictions in your activities Following your surgeon's advice can help you recover as soon as possible. Agency for Healthcare Research and Quality
+
+Related MedlinePlus topic groups: Surgery and Rehabilitation.

@@ -1,0 +1,14 @@
+---
+source: MedlinePlus (National Library of Medicine)
+title: Men's Health
+published: 12/02/1999
+url: https://medlineplus.gov/menshealth.html
+jurisdiction: US
+category: health-topics
+---
+
+# Men's Health
+
+Most men need to pay more attention to their health. Compared to women, men are more likely to: Smoke and drink Make unhealthy or risky choices Put off regular checkups and medical care There are also health conditions that only affect men, such as prostate cancer and low testosterone. Many of the major health risks that men face - like colon cancer or heart disease - can be prevented and treated with early diagnosis. Screening tests can find diseases early, when they are easier to treat. It's important to get the screening tests you need.
+
+Related MedlinePlus topic groups: Men; Population Groups.

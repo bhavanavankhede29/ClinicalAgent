@@ -1,0 +1,2430 @@
+---
+source: NLM Clinical Table Search Service — Conditions table
+title: Unique Disease/Condition Name List (NLM Conditions Table)
+published: 2026-09-04
+url: https://clinicaltables.nlm.nih.gov/apidoc/conditions/v3/doc.html
+jurisdiction: US
+category: guidelines
+---
+
+# Unique disease / condition name list
+
+2417 unique, de-duplicated condition names collected from the NLM Clinical Table Search Service's curated "conditions" table (the same consumer/clinical condition list that powers MedlinePlus and ClinicalTrials.gov autocomplete). This is a reference name list for matching/lookup, not clinical guidance — it carries no dosing, staging, or management content of its own.
+
+- Abdominal abscess
+- Abdominal aneurysm
+- Abdominal bruit
+- Abdominal colic
+- Abdominal mass
+- Abdominal pain
+- Abducens nerve palsy
+- Abetalipoporteinemia
+- ABO incompatibility
+- Abortion
+- Abruptio placentae
+- Abscess
+- Abuse - alcohol
+- Acanthosis nigricans
+- Achalasia
+- Achilles tendon rupture
+- Achlorhydria
+- Acidosis - lactic
+- Acidosis - metabolic
+- Acinar cell tumor
+- Acinic cell adenocarcinoma
+- Acne
+- Acoustic neuroma
+- Acrodermatitis - papular
+- Acromegaly
+- Acropustulosis - infantile
+- ACTH syndrome - ectopic
+- Actinomycosis
+- Acute myocardial infarction s/p TPA
+- Acute respiratory distress syndrome
+- Adamantinoma
+- Adenoacanthoma
+- Adenocarcinoma
+- Adenocarcinoma in-situ
+- Adenofibroma
+- Adenoids - large
+- Adenoma
+- Adenoma - follicular
+- Adenoma - nephrogenic
+- Adenoma - papillary
+- Adenoma - pleomorphic
+- Adenoma - sebaceous
+- Adenoma - testicular
+- Adenoma - tubular
+- Adenoma - villous
+- Adenosis - sclerosing
+- Adenosquamous carcinoma
+- Adenotonsillar hypertrophy
+- Adnexal mass
+- Adrenal cancer
+- Adrenal cortical adenocarcinoma
+- Adrenal cortical adenoma
+- Adrenal insufficiency
+- Adrenogenital syndrome
+- Adult abuse
+- Afibrinogenemia
+- Agoraphobia with panic attacks
+- Agoraphobia without panic attack
+- AIDS
+- AIDS-related complex
+- Akathisia
+- Albinism
+- Alcohol abuse - continuous
+- Alkalosis - metabolic
+- Alkalosis - respiratory
+- Alkaptonuria
+- Allergic alveolitis
+- Alopecia
+- Alopecia areata
+- Alopecia mucinosa
+- Alpha thalassemia
+- Alport syndrome
+- Alveolar osteitis
+- Alveolar proteinosis
+- Alveolar soft part sarcoma
+- Alzheimer's disease
+- Amaurosis fugax
+- Amblyopia
+- Ameloblastoma
+- Amenorrhea
+- Amnesia
+- Amphetamine abuse
+- Amylase - high
+- Amyloid
+- Amyotrophic lateral sclerosis
+- Anal fissure
+- Anal fistula
+- Anaphylaxis
+- Anasarca
+- Androblastoma
+- Androgen deficiency
+- Anemia
+- Anemia - aplastic
+- Anemia - autoimmune hemolytic
+- Anemia - dilutional
+- Anemia - folate deficiency
+- Anemia - from chronic disease
+- Anemia - hemolytic
+- Anemia - iron deficiency
+- Anemia - macrocytic
+- Anemia - megaloblastic
+- Anemia - microcytic
+- Anemia - myelophthisic
+- Anemia - normocytic
+- Anemia - pernicious
+- Anemia - refractory
+- Anemia - sideroblastic
+- Anemia - vitamin B6 deficiency
+- Anetoderma
+- Aneurysm - dissecting
+- Angina - Ludwig's
+- Angina - recurrent
+- Angina - unstable
+- Angina pectoris
+- Angiodysplasia
+- Angioedema
+- Angiofibroma - juvenile
+- Angiokeratoma
+- Angiolipoma
+- Angiomyolipoma
+- Animal bite
+- Aniseikonia
+- Anisocoria
+- Anisometropia
+- Ankle dislocation
+- Ankle fracture
+- Ankle sprain
+- Ankle/foot pain
+- Ankylosing spondylosis
+- Anorexia
+- Anorexia nervosa
+- Anosmia
+- Anovulation
+- Anterior meniscus tear
+- Anthracosis
+- Antisocial personality disorder
+- Antrum deformed
+- Anxiety
+- Aortic aneurysm
+- Aortic coarctation
+- Aortic dissection
+- Aortic insufficiency
+- Aortic root dilated
+- Aortic stenosis
+- Aortic valve - bicuspid
+- Aortic valve abnormality
+- Aphakia
+- Aphonia
+- Apnea
+- Appendicitis
+- Appendolithiasis
+- Arachnoiditis
+- Arm pain
+- Arrhythmia
+- Arteriosclerosis
+- Arteriovenous fistula
+- Arteriovenous malformation
+- Arteriovenous shunt
+- Arthralgia
+- Arthritis
+- Arthritis - gonococcal
+- Arthritis - psoriatic
+- Arthritis - septic
+- Asbestosis
+- Ascites
+- Asperger syndrome
+- Aspergillus species
+- Aspermia
+- Asphyxia
+- Aspiration
+- Asplenia
+- Asthma
+- Asthma - mild intermittent
+- Asthma - mild persistent
+- Asthma - moderate persistent
+- Asthma - severe persistent
+- Astigmatism
+- Astrocytoma
+- Asymmetric septal hypertrophy
+- Ataxia
+- Atelectasis
+- Atelectasis - subsegmental
+- Atopic dermatitis
+- Atransferrinemia
+- Atrial fibrillation
+- Atrial flutter
+- Atrial myxoma
+- Atrial septal defect
+- Atrial tachycardia - paroxysmal with av block
+- Atrophic gastritis
+- Atten deficit hyperactivity disorder
+- Autism
+- Autosomal dominant polycystic kidney disease
+- Avascular necrosis
+- Babesiosis
+- Back pain
+- Back strain
+- Bacteremia
+- Bacteriuria
+- Baker's cyst
+- Balanitis
+- Barrett's esophagus
+- Bartholin's gland cyst
+- Bartonellosis
+- Bartter syndrome
+- Basal cell cancer
+- Basal ganglia hemorrhage
+- Basophilic adenoma
+- Battered person
+- Becker muscular dystrophy
+- Behavior problem
+- Behcet's syndrome
+- Belching
+- Bells palsy
+- Benign prostatic hypertrophy
+- Berry aneurysm
+- Berylliosis
+- Beta thalassemia
+- Bezoar
+- Biceps tendon rupture
+- Bile duct adenocarcinoma
+- Bile ducts - dilated
+- Bile reflux
+- Bile stasis
+- Biliary colic
+- Biliary disorder
+- Biliary fistula
+- Biliary obstruction
+- Binge eating
+- Bioprosthetic heart valve
+- Bipolar disorder
+- Bipolar disorder - depressed phase
+- Bipolar disorder - manic phase
+- Bipolar disorder - mixed
+- Birthmark
+- Black hairy tongue
+- Bladder - large
+- Bladder - neurogenic
+- Bladder cancer
+- Bladder disorder
+- Bladder diverticulum
+- Bladder mass
+- Bladder outlet obstruction
+- Bladder spasm
+- Bladder stone
+- Blastomycosis
+- Bleeding disorder
+- Blepharitis
+- Blepharoconjunctivitis
+- Blepharospasm
+- Blindness
+- Blister
+- Blood group A positive
+- Blood group AB positive
+- Blood group B positive
+- Blood group O positive
+- Blood in ear canal
+- Blood loss
+- Blount's disease
+- Blue nevus
+- Blue nevus - cellular
+- Blue nevus - common
+- Blushing
+- Bone cyst
+- Bone disease - aluminum related
+- Bone disease - metabolic
+- Bone disorder
+- Bone marrow failure
+- Bone marrow toxicity
+- Bone metastases
+- Bone pain
+- Bone tumor - benign
+- Borderline personality disorder
+- Botulism
+- Bowel habits - altered
+- Bowen's disease
+- Bradycardia
+- Brain abscess
+- Brain malignancy
+- Brain stem disease
+- Brain tumor
+- Brainstem hemorrhage
+- Branchial cleft cyst
+- Breast abscess
+- Breast calcification
+- Breast cancer
+- Breast cyst
+- Breast discharge
+- Breast disease - fibrocystic
+- Breast disorder
+- Breast mass
+- Breast pain
+- Breast tender
+- Breast ulcer
+- Brenner tumor - benign
+- Brenner tumor - malignant
+- Bromhidrosis
+- Bronchial bleeding
+- Bronchial obstruction
+- Bronchiectasis
+- Bronchiolitis
+- Bronchitis
+- Bronchitis - acute
+- Bronchitis - chronic
+- Bronchopulmonary dysplasia
+- Bruit
+- Bruit - femoral
+- Buccal cavity disease
+- Bulimia
+- Bullous pemphigoid
+- Bunion
+- Burkitt's tumor
+- Burn
+- Burn - chemical
+- Bursitis
+- C1 ring fracture
+- C6 radiculopathy
+- C7 radiculopathy
+- Cachexia
+- Café au lait spot
+- Calcaneal spur
+- Calcaneus fracture
+- Calcinosis cutis
+- Calf pain
+- Callus
+- Candidiasis
+- Capsulitis - adhesive
+- Carbon monoxide toxicity
+- Carbuncle
+- Carcinoid syndrome
+- Carcinoid tumor
+- Carcinoid tumor - malignant
+- Carcinoma - adenoid cystic
+- Carcinoma - cloacogenic
+- Carcinoma - giant cell
+- Carcinoma - metastatic
+- Carcinoma - non-small cell type
+- Carcinoma - pseudosarcomatous
+- Carcinoma - Sertoli cell
+- Carcinoma - verrucous
+- Cardiac arrest
+- Cardiac injury
+- Cardiac myxoma
+- Cardiac prosthesis - infected
+- Cardiomegaly
+- Cardiomyopathy
+- Cardiomyopathy - ischemic
+- Cardiovascular disease - hypertensive
+- Cardiovascular disorder
+- Carious teeth
+- Carotid artery disease
+- Carotid bruit
+- Carpal tunnel syndrome
+- Cartilage disorder
+- Cat scratch disease
+- Cataract
+- Cataract - infantile
+- Cataract - senile
+- Cataract - traumatic
+- Cauda equina tumor
+- Cavernous hemangioma
+- Cellulitis
+- Central nervous system bleeding
+- Central nervous system disorder
+- Central nervous system shunt infection
+- Central nervous system shunt malfunction
+- Cephalohematoma
+- Cerebellar atrophy
+- Cerebellar degeneration
+- Cerebellar hemorrhage
+- Cerebral atrophy
+- Cerebral contusion
+- Cerebral edema
+- Cerebral mass
+- Cerebral palsy
+- Cerebrospinal fluid leak
+- Cerebrospinal fluid protein - high
+- Cerebrovascular disease
+- Cerumen impaction
+- Cervical adenitis
+- Cervical cancer
+- Cervical dysplasia
+- Cervical polyp
+- Cervical root compression
+- Cervical spondylosis
+- Cervical sprain
+- Cervical vertebra fracture
+- Cervical vertebral subluxation
+- Cervicitis
+- Cervix disorder
+- Cervix incompetent
+- Chagas disease
+- Chalasia
+- Chalazion
+- Chancroid
+- Cheilitis - actinic
+- Cheilitis - acute
+- Cheilitis - chronic
+- Cheilosis
+- Chest discomfort
+- Chest pain
+- Chest trauma
+- Cheyne-Stokes respiration
+- Chilblains
+- Child abuse
+- Chlamydia infect
+- Chlamydia pneumonia
+- Choking
+- Cholangitis
+- Cholangits sclerosing
+- Cholecystitis
+- Cholelithiasis
+- Cholesteatoma
+- Cholesterolosis
+- Chondroblastoma
+- Chondroblastoma - malignant
+- Chondrodermatitis
+- Chondromalacia
+- Chondrosarcoma
+- Chordoma
+- Chorea
+- Chorioamnionitis
+- Choriocarcinoma
+- Chorioretinitis
+- Choroid plexus papilloma
+- Chromomycosis
+- Chromophobe adenocarcinoma
+- Chromosomal disorder
+- Chronic fatigue syndrome
+- Chronic glomerulonephritis unspecified
+- Chronic granulomatous disease
+- Chronic infection
+- Chronic membranoproliferative glomerulonephritis
+- Chronic myelocytic leukemia
+- Chronic obstructive pulmonary disease
+- Chronic obstructive pulmonary disease exacerbation
+- Chronic passive congestion
+- Cicatricial pemphigoid
+- Cigarette smoker
+- Cirrhosis - biliary
+- Cirrhosis - micronodular
+- Claudication
+- Claustrophobia
+- Clavicle fracture
+- Cleft lip
+- Cleft palate
+- Clostridium difficile (C. diff) colitis
+- Club foot
+- CMV retinitis
+- Coagulopathy
+- Cocaine abuse
+- Cocaine abuse - episodic
+- Coccidiomycosis
+- Coccyx/sacrum fracture
+- Coin lesion
+- Cold intolerance
+- Colic - infantile
+- Colitis
+- Colitis - amebic
+- Colitis - ischemic
+- Colitis - ulcerative
+- Coloboma
+- Colon diverticulitis
+- Colon diverticulosis
+- Colon obstruction
+- Colon polyp
+- Colon stricture
+- Colonic volvulus
+- Color blindness
+- Colorectal cancer
+- Coma
+- Coma - hyperosmolar nonketotic (HONK)
+- Comedo
+- Comedocarcinoma
+- Common cold
+- Common duct stone
+- Compartment syndrome
+- Compression fracture
+- Concussion
+- Condyloma acuminata
+- Condyloma latum
+- Confusion
+- Congenital adrenal hyperplasia (CAH)
+- Congestive heart failure
+- Conjunctiva - red
+- Conjunctival hemorrhage
+- Conjunctivitis
+- Conjunctivitis - acute
+- Conjunctivitis - allergic
+- Conjunctivitis - bacterial
+- Conjunctivitis - chronic
+- Connective tissue disease
+- Constipation
+- Contact lens problem
+- Contracture
+- Contusion
+- Copper deficiency
+- Cor pulmonale
+- Corneal abrasions
+- Corneal erosion
+- Corneal ulcer
+- Coronary artery disease
+- Costochondritis
+- Costovertebral angle pain
+- Costovertebral angle tenderness
+- Cough
+- Cradle cap
+- Craniopharyngioma
+- Craniosynostosis
+- Creeping eruption
+- Creutzfeldt-Jakob disease
+- Crohns disease
+- Croup
+- Cruciate ligament tear
+- Crying spells
+- Cryoglobulinemia
+- Cryptosporidium
+- Cushing's disease
+- Cutaneous B cell lymphoma
+- Cutaneous horn
+- Cutaneous lupus erythematosus - subacute
+- Cutaneous vasculitis - allergic
+- Cystadenocarcinoma
+- Cystadenoma
+- Cystic duct stone
+- Cystic fibrosis
+- Cystic lymphangioma
+- Cysticercosis
+- Cystinuria
+- Cystitis
+- Cystitis glandularis
+- Cysto Ureteral Reflux
+- Cystocele
+- Cystosarcoma phyllodes
+- Cytomegalovirus infection
+- Dacryocystitis
+- Darier-White disease
+- Deafness - bone
+- Deafness - nerve
+- Decubitus ulcer
+- Deep vein thrombosis
+- Delirium - acute
+- Delirium tremens
+- Dementia
+- Dementia - alcohol-associated
+- Dementia - dialysis
+- Dementia - multi-infarction
+- Denervation
+- Dengue fever
+- Dental/mouth abnormality
+- Dental/mouth disorder
+- Depression
+- Depressive disorder - atypical
+- Dermal sinus tract
+- Dermatitis
+- Dermatitis - chronic
+- Dermatitis - contact
+- Dermatitis - exfoliative
+- Dermatitis - radiation
+- Dermatitis - seborrheic
+- Dermatitis - stasis
+- Dermatitis herpetiformis
+- Dermatofibroma
+- Dermatofibrosarcoma
+- Dermatographism
+- Dermatomyositis
+- Dermatophytosis
+- Dermatosis - pigmented purpuric
+- Dermatosis papulosa nigra
+- Dermoid cyst
+- Descending perineum syndrome
+- Desmoid
+- Developmental delay
+- Dextrocardia
+- Di Guglielmo's syndrome
+- Diabetes - gestational
+- Diabetes insipidus
+- Diabetes mellitus
+- Diabetes mellitus - insulin dependent
+- Diabetes mellitus - non insulin dependent
+- Diabetic enteropathy
+- Diabetic ketoacidosis
+- Diabetic nephropathy - adult controlled
+- Diabetic nephropathy - adult uncontrolled
+- Diabetic nephropathy - juvenile controlled
+- Diabetic nephropathy - juvenile uncontrolled
+- Diabetic retinopathy - pre-proliferative
+- Dialysis status
+- Diaper rash
+- Diarrhea
+- Difficulty walking
+- Diplopia
+- Disabled
+- Disaccharidase deficiency
+- Diskitis
+- Disseminated intravascular coagulation
+- Diverticulum
+- Dizziness
+- Dog bite
+- Down syndrome
+- Dressler's syndrome
+- Dribbling of urine
+- Drug abuse - IV
+- Drug abuse - mixed
+- Drug addiction
+- Drug eruption - fixed
+- Drug overdose
+- Dry eye syndrome
+- Dry gangrene
+- Duchenne muscular dystrophy (DMD)
+- Ductal carcinoma
+- Duodenal bulb deformed
+- Duodenal diverticulum
+- Duodenal obstruction
+- Duodenal perforation
+- Duodenal ulcer
+- Duodenitis
+- Duplicated urinary tract
+- Dysarthria
+- Dyschromia
+- Dyskeratosis
+- Dyslexia
+- Dysmenorrhea
+- Dyspareunia
+- Dyspepsia
+- Dysphagia
+- Dysphasia
+- Dyspnea
+- Dyspraxia
+- Dysthymia
+- Dystonia
+- Dysuria
+- Ear disorder
+- Ear foreign body
+- Ear pain
+- Early satiety
+- Ecchymosis
+- Echinococcosis
+- Eclampsia
+- Eclampsia - postpartum
+- Ecthyma
+- Ectodermal dysplasia
+- Ectropion
+- Eczema
+- Eczema - dyshidrotic
+- Eczema - nummular
+- Edema
+- Edema peripheral
+- Ehlers-Danlos syndrome
+- Elastosis
+- Elbow dislocation
+- Elbow fracture
+- Elbow pain
+- Elbow sprain
+- Elbow strain
+- Embolism - amniotic fluid
+- Embolism - fat
+- Embolism - peripheral
+- Embolism - septic
+- Embolism - tumor
+- Embryonal rhabdomyosarcoma
+- Emotional disorder
+- Emphysema
+- Empty sella syndrome
+- Empyema
+- Encephalitis
+- Encephalocele
+- Encephalomalacia
+- Encephalopathy
+- Encephalopathy - anoxic
+- Encephalopathy - hypertensive
+- Encephalopathy - metabolic
+- Endocarditis - bacterial
+- Endocarditis - subacute bacterial
+- Endodermal sinus tumor
+- Endometrial polyp
+- Endometrioid carcinoma
+- Endometriosis
+- Endometritis
+- Entropion
+- Enuresis
+- Enzyme deficiency
+- Eosinophilia
+- Ependymoma
+- Ephelis
+- Epicondylitis
+- Epidermal inclusion cyst
+- Epididymitis
+- Epidural hematoma
+- Epigastric pain
+- Epiglottitis
+- Epilepsy
+- Epistaxis
+- Epithelial inclusion cyst
+- Epstein-Barr virus (EBV) serostatus positive
+- Erectile dysfunction
+- Erysipelas
+- Erythema
+- Erythema annulare centrifigum
+- Erythema infectiosum
+- Erythema migrans
+- Erythema multiforme
+- Erythema nodosum
+- Erythema toxicum
+- Erythrasma
+- Erythroblastosis fetalis
+- Erythrocytosis
+- Erythroderma
+- Esophageal atresia
+- Esophageal cancer
+- Esophageal disorder
+- Esophageal diverticulum
+- Esophageal dysphagia
+- Esophageal perforation
+- Esophageal reflux
+- Esophageal spasm
+- Esophageal stenosis
+- Esophageal stricture
+- Esophageal ulcer
+- Esophageal varices
+- Esophageal web
+- Esophagitis
+- Esotropia
+- Esotropia - intermittent
+- Estrogens - elevated
+- Ethanol withdrawal
+- Eustachian tube dysfunction
+- Eventration - diaphragmatic
+- Ewing's sarcoma
+- Excoriation
+- Excoriation - neurotic
+- Exhaustion - heat
+- Exophthalmos
+- Exostosis
+- Exotropia
+- Exotropia - intermittent
+- Extraocular muscle palsy
+- Extremity ulcer
+- Eye burning
+- Eye discharge
+- Eye disorder
+- Eye foreign body
+- Eye injury
+- Eye pain
+- Eyelid problem
+- Facial bone fracture
+- Factor X deficiency
+- Factor XII deficiency
+- Failure to thrive
+- Fallopian tube cancer
+- False labor
+- False teeth
+- Familial adenomatous polyposis
+- Familial Mediterranean fever
+- Family problem
+- Fanconi syndrome
+- Fasciitis - necrotizing
+- Fasciitis - nodular
+- Fatigue
+- Feces - abnormal
+- Feeding problem
+- Felty syndrome
+- Femoral shaft fracture
+- Femur fracture
+- Femur neck fracture
+- Fetal alcohol syndrome
+- Fetal demise
+- Fetal distress
+- Fever
+- Fever - unknown origin (FUO)
+- Fibroadenoma
+- Fibroma
+- Fibroma - non-ossifying
+- Fibromatosis
+- Fibromuscular hyperplasia
+- Fibromyalgia
+- Fibrosarcoma
+- Fibrous papule
+- Fibroxanthoma
+- Fibula fracture
+- Filariasis
+- Filtering bleb failed
+- Finger fracture
+- Finger pain
+- Finger sprain
+- Flank pain
+- Flat feet
+- Flatulence
+- Fluid and/or electrolyte disorder
+- Fluid wave
+- Flushing
+- Follicular adenocarcinoma
+- Folliculitis
+- Foot dislocation
+- Foot disorder
+- Foot drop
+- Foot fracture
+- Foot pain
+- Foot polydactyly
+- Foot ulcer
+- Foot ulcer - diabetic
+- Forearm fracture - open
+- Foreign body
+- Foreign body - nose
+- Friedreich's ataxia
+- Frostbite
+- Fructose intolerance
+- Furuncle
+- Gait problem
+- Galactorrhea
+- Galactosemia
+- Gallbladder - large
+- Gallbladder cancer
+- Gallbladder disorder
+- Gallbladder perforation
+- Ganglion cyst
+- Ganglioneuroblastoma
+- Gangrene
+- Gangrenous gallbladder
+- Gastric cancer
+- Gastric dilatation
+- Gastric diverticuli
+- Gastric emptying - delayed
+- Gastric obstruction
+- Gastric perforation
+- Gastric polyp
+- Gastric retention
+- Gastric ulcer
+- Gastric varices
+- Gastritis
+- Gastroenteritis
+- Gastroesophageal tear
+- Gastrointestinal bleeding
+- Gastrointestinal disorder
+- Gastrointestinal fistula
+- Gastrointestinal motility disorder
+- Gastrointestinal perforation
+- Gastroparesis
+- Gastroschisis
+- Gauchers disease
+- Generalized anxiety disorder
+- Genital anomalies
+- Genital herpes
+- Genitourinary disorder
+- Giant cell arteritis
+- Giant cell tumor of bone
+- Giant cell tumor of soft parts
+- Giant cell tumor tendon sheath
+- Giardia lamblia infection
+- Gingivitis
+- Gingivosis
+- Glaucoma
+- Glaucoma - chronic angle closure
+- Glaucoma - combined mechanism
+- Glaucoma - congenital
+- Glaucoma - low tension
+- Glaucoma - pigmentary
+- Glaucoma - primary angle closure
+- Glaucoma - primary open angle
+- Glaucoma - pseudoexfoliation
+- Glioblastoma multiforme
+- Gliosis
+- Glomerulonephritis (GN)
+- Glomerulonephritis - acute
+- Glomerulonephritis - chronic membranous
+- Glomerulonephritis - membranoproliferative
+- Glomerulonephritis - membranous
+- Glomerulonephritis - mesangial proliferative
+- Glomerulonephritis - minimal change
+- Glomerulonephritis - post-infectious
+- Glomerulonephritis - post-streptococcal
+- Glomerulonephritis - rapidly progressive
+- Glomerulosclerosis - Focal segmental
+- Glomus tumor
+- Glossitis
+- Glucagonoma
+- Glucagonoma - malignant
+- Glucose intolerance
+- Glucose-6-phosphate dehydrogenase (G6PD) deficiency
+- Glycogen storage disease
+- Glycosuria
+- Goiter
+- Goiter - multinodular
+- Gonadal dysgenesis
+- Gonorrhea
+- Goodpasture's syndrome
+- Gout
+- Graft versus host reaction
+- Granular cell tumor
+- Granuloma - calcified
+- Granuloma - caseating
+- Granuloma - eosinophilic
+- Granuloma - inguinale
+- Granuloma - injection
+- Granuloma - necrotizing
+- Granuloma - non-necrotizing
+- Granuloma - stitch
+- Granuloma annulare
+- Granuloma faciale
+- Granulosa cell tumor
+- Graves disease
+- Guillain-Barre syndrome
+- Gum bleeding
+- Gunshot wound (GSW)
+- Gynecomastia
+- Hailey-Hailey disease
+- Hairy cell leukemia
+- Halitosis
+- Hallucinations
+- Hamartoma
+- Hammer toe
+- Hand cellulitis
+- Hand fracture
+- Hand injury
+- Hand pain
+- Hand polydactyly
+- Hartnup disease
+- Hashimoto thyroiditis
+- Head & neck cancer
+- Head injury
+- Headache
+- Headache - cluster
+- Headache - tension
+- Hearing aid
+- Hearing loss
+- Heart disease - congenital
+- Heart disease - rheumatic
+- Heart murmur
+- Heartburn
+- Heat intolerance
+- Heat stroke
+- Heavy metal toxicity
+- Heel pain
+- Helicobacter pylori infection
+- HELLP syndrome
+- Hemangioma
+- Hemangioma - capillary
+- Hemangiopericytoma
+- Hemangiopericytoma - malignant
+- Hemangiosarcoma
+- Hemarthrosis
+- Hematemesis
+- Hematochezia
+- Hematuria
+- Hematuria - gross
+- Hemiparesis
+- Hemochromatosis
+- Hemodialysis
+- Hemodialysis complication
+- Hemoglobin A2 - high
+- Hemoglobinopathy
+- Hemoglobinuria
+- Hemolytic uremic syndrome
+- Hemophilia
+- Hemophilia A
+- Hemophilia B
+- Hemoptysis
+- Hemorrhoids
+- Hemosiderosis
+- Hemothorax
+- Henoch-Schonlein purpura
+- Hepatic abscess
+- Hepatic adenoma
+- Hepatic cancer
+- Hepatic cyst
+- Hepatic encephalopathy
+- Hepatic failure
+- Hepatic fibrosis
+- Hepatic infection
+- Hepatic mass
+- Hepatic metastases
+- Hepatic rupture
+- Hepatic vein obstruction
+- Hepatitis
+- Hepatitis - acute
+- Hepatitis - alcohol
+- Hepatitis - chronic
+- Hepatitis - chronic active
+- Hepatitis - chronic persistent
+- Hepatitis - drug induced
+- Hepatitis - giant cell
+- Hepatitis - neonatal
+- Hepatitis A
+- Hepatitis B
+- Hepatitis B exposure
+- Hepatitis C
+- Hepatitis C exposure
+- Hepatitis exposure
+- Hepatoblastoma
+- Hepatocellular carcinoma
+- Hepatocellular disease - diffuse
+- Hepatomegaly
+- Hepatorenal syndrome
+- Hernia
+- Hernia - diaphragmatic
+- Hernia - femoral
+- Hernia - hiatal
+- Hernia - incarcerated
+- Hernia - incisional
+- Hernia - inguinal
+- Hernia - umbilical
+- Hernia - ventral
+- Heroin abuse
+- Herpangina
+- Herpes encephalitis
+- Herpes gingivostomatitis
+- Herpes infection
+- Herpes simplex ocular
+- Herpes zoster
+- Herpetic keratitis
+- Herpetic whitlow
+- HGPRT deficiency
+- Hiccups
+- Hidradenitis
+- Hidradenoma
+- Hilar adenopathy
+- Hilar mass
+- Hilar node -  calcified
+- Hip dislocation
+- Hip dislocation - congenital
+- Hip fracture
+- Hip or thigh injury
+- Hip pain
+- Hip subluxation - congenital
+- Hirschsprung's disease
+- Hirsutism
+- Histiocytoma - atypical fibrous
+- Histiocytoma - malignant fibrous
+- Histiocytosis - malignant
+- Histiocytosis X syndrome
+- Histocytosis
+- Histoplasmosis
+- HIV - Congenital
+- HIV exposure
+- HIV infection
+- HIV positive
+- Hoarse
+- Hodgkin's lymphoma
+- Homocystinuria
+- Hookworm infection
+- Hordeolum
+- Horner's syndrome
+- Human bite - accidental
+- Human bite - assault
+- Humerus fracture
+- Hurthle cell adenoma
+- Hurthle cell tumor
+- Hutchinson's melanotic freckle
+- Hydatidiform mole - invasive
+- Hydrocele
+- Hydrocephalus
+- Hydrocephalus - low pressure
+- Hydronephrosis
+- Hydrops fetalis
+- Hydrosalpinx
+- Hyperactivity
+- Hyperaldosteronism
+- Hyperbilirubinemia
+- Hypercalcemia
+- Hyperchloremia
+- Hypercholesterolemia
+- Hyperemesis
+- Hyperestrogenism
+- Hypergammaglobulinemia
+- Hyperglycemia
+- Hyperhidrosis
+- Hyperkalemia
+- Hyperkeratosis
+- Hyperlipidemia
+- Hyperlipoproteinemia (type IV)
+- Hyperlipoproteinemia (type V)
+- Hyperlipoproteinemia - type I
+- Hypermagnesemia
+- Hypernatremia
+- Hyperopia
+- Hyperosmolality
+- Hyperparathyroid
+- Hyperphosphatemia
+- Hyperpigmentation
+- Hyperplasia - nodular
+- Hyperplastic marrow
+- Hyperprolactinemia
+- Hyperproteinemia
+- Hypersensitivity
+- Hypertension
+- Hypertension - benign essential
+- Hypertension - benign renovascular
+- Hypertension - essential
+- Hypertension - malignant essential
+- Hypertension - malignant renovascular
+- Hypertension - uncontrolled
+- Hypertension with pregnancy
+- Hyperthermia - malignant
+- Hyperthyroidism
+- Hypertriglyceridemia
+- Hypertrophic obstructive cardiomyopathy (HOCM)
+- Hyperuricemia
+- Hyperventilation
+- Hyperviscosity syndrome
+- Hyphema
+- Hyphema -traumatic
+- Hypoalbuminemia
+- Hypoaldosteronism
+- Hypocalcemia
+- Hypochloremia
+- Hypochondriasis
+- Hypogammaglobulinemia
+- Hypoglycemia
+- Hypogonadism - female
+- Hypogonadism - male
+- Hypokalemia
+- Hypomagnesemia
+- Hyponatremia
+- Hypoparathyroidism
+- Hypophosphatemia
+- Hypopigmentation
+- Hypopituitarism
+- Hypoplastic left heart syndrome (HLHS)
+- Hypoplastic marrow
+- Hypospadias
+- Hypotension
+- Hypothermia
+- Hypothyroidism
+- Hypotonia
+- Hypoxia
+- Ichthyosis
+- Id reaction
+- Idiopathic thrombocytopenic purpura
+- Ileitis
+- Ileus
+- Impaction - fecal
+- Imperforate anus
+- Imperforate hymen
+- Impetigo
+- Impotence
+- Inborn error of metabolism
+- Incontinence - fecal
+- Incontinentia pigmenti
+- Infant of diabetic mother
+- Infantile spasms
+- Infectious mononucleosis
+- Infertility
+- Infertility - female
+- Infertility - male
+- Inflammation - granulomatous
+- Inflammatory bowel disease
+- Influenza
+- Influenza A infection
+- Influenza B infection
+- Ingrown nail
+- Insect bite - venomous
+- Insomnia
+- Insulinoma
+- Insulinoma - malignant
+- Interstitial cystitis
+- Interstitial nephritis
+- Interstitial nephritis - acute
+- Interstitial nephritis - chronic
+- Intertrigo
+- Intervertebral disc - herniated
+- Intervertebral disc degeneration
+- Intracerebral bleeding
+- Intraductal carcinoma
+- Intraductal papilloma
+- Intraductal papillomatosis
+- Intraepithelial lesion - squamous
+- Intrarectal intussusception
+- Intraventricular hemorrhage
+- Intrinsic factor deficiency
+- Intussusception
+- Iodine allergy
+- Iritis
+- Irritable bowel syndrome
+- Islet cell adenocarcinoma
+- Islet cell adenoma
+- Jaundice
+- Jaw fracture
+- Jaw pain
+- Jessner's lymphocytic infiltration of the skin
+- Joint capsulitis
+- Joint contracture
+- Joint disorder
+- Joint effusion
+- Joint prosthesis
+- Jugular vein thrombosis
+- Juvenile rheumatoid arthritis
+- Juvenile xanthogranuloma
+- Kaposi's sarcoma
+- Kaposi's varicelliform eruption
+- Kawasaki disease
+- Keratin plug
+- Keratitis
+- Keratoacanthoma
+- Keratoconjunctivitis
+- Keratoderma - acquired
+- Keratoderma - congenital
+- Keratosis
+- Keratosis - actinic
+- Keratosis - arsenical
+- Keratosis - inverted follicular
+- Keratosis - pilaris
+- Keratosis - seborrheic
+- Keratosis - seborrheic inflamed
+- Kerion
+- Ketoacidosis - alcohol
+- Ketonemia
+- Ketonuria
+- Kidney - horseshoe
+- Kidney - large
+- Kidney absent
+- Klinefelter syndrome
+- Knee derangement - internal
+- Knee dislocation
+- Knee fracture
+- Knee pain
+- Knee sprain
+- Knock knee
+- Kyphoscoliosis
+- Kyphosis
+- Labyrinth disease
+- Laceration
+- Lactose intolerance
+- Lacunar infarct
+- Large-plaque parapsoriasis
+- Laryngeal abscess
+- Laryngeal edema
+- Laryngeal mass
+- Laryngeal polyp
+- Laryngeal ulcer
+- Laryngitis
+- Larynx cancer
+- Lateral meniscus tear
+- Lateral pharyngeal space abscess
+- Laxative abuse
+- Lead line
+- Lead toxicity
+- Learning disability
+- Left to right cardiovascular shunt
+- Left ventricular dysfunction - systolic
+- Leg cramps
+- Leg infection
+- Leg numbness
+- Leg pain
+- Leg ulcer
+- Legg-Calvé-Perthes disease
+- Leiomyoma
+- Leiomyosarcoma
+- Lens - dislocated
+- Lens pseudoexfoliation syndrome
+- Lentigo
+- Lentigo maligna melanoma
+- Lentigo simplex
+- Leprosy
+- Leptospirosis
+- Leukemia
+- Leukemia cutis
+- Leukemoid reaction
+- Leukocytosis
+- Leukopenia
+- Leukoplakia
+- Leydig cell tumor - benign
+- Leydig cell tumor - malignant
+- Lichen nitidus
+- Lichen planus
+- Lichen sclerosus et atrophicus
+- Lichen simplex chronicus
+- Lichenoid dermatitis
+- Lichenoid drug eruption
+- Lid lag
+- Linear immunoglobulin A dermatosis
+- Linitis plastica
+- Lip neoplasm - malignant
+- Lipogranuloma
+- Lipoma
+- Liposarcoma
+- Liposarcoma - myxoid
+- Liposarcoma - pleomorphic
+- Listeriosis
+- Lithium toxicity
+- Livedo reticularis
+- Liver - small
+- Liver cirrhosis
+- Liver disease - alcoholic
+- Liver function tests - abnormal
+- Lobular adenocarcinoma
+- Lobular carcinoma in-situ
+- Lordosis
+- Louse-borne relapsing fever
+- Lower back pain
+- Lower gastrointestinal bleeding
+- Lower leg injury
+- Lower leg/knee instability
+- Lues
+- Lumbar vertebra fracture
+- Lumbar vertebral subluxation
+- Lumbosacral spondylosis
+- Lung cancer
+- Lupus discoid
+- Lupus erythematosus
+- Lupus profundus
+- Lyme arthritis
+- Lyme disease
+- Lymphadenitis
+- Lymphadenitis - acute
+- Lymphadenitis - chronic
+- Lymphadenopathy
+- Lymphangiectasis
+- Lymphangioma
+- Lymphangiosarcoma
+- Lymphangitis
+- Lymphedema
+- Lymphocytic leukemia - acute
+- Lymphocytic leukemia - chronic
+- Lymphocytoma cutis
+- Lymphocytopenia
+- Lymphocytosis
+- Lymphogranuloma venereum
+- Lymphoid hyperplasia
+- Lymphoid hypoplasia
+- Lymphoma
+- Lymphomatoid granulomatosis
+- Lymphomatoid papulosis
+- Macrocephaly
+- Macroglobulinemia
+- Macrosomia
+- Macular degeneration
+- Macular degeneration - cystoid
+- Macular rash
+- Maculopapular rash
+- Majocchi's granuloma
+- Major depression - recurrent
+- Malabsorption
+- Malaria
+- Malignancy
+- Malignant cystosarcoma phyllodes
+- Malignant giant cell tumor of bone
+- Malignant glioma
+- Malignant mixed tumor
+- Mallet finger
+- Malnutrition
+- Malrotation
+- Mania
+- Maple syrup urine disease (MSUD)
+- Marfan's syndrome
+- Mastitis
+- Mastocytoma
+- Mastoid tender
+- Mastoiditis
+- Maxillofacial abscess
+- Measles
+- Meatal stricture
+- Meckels diverticulum
+- Meconium aspiration syndrome
+- Meconium ileus
+- Medial meniscus tear
+- Median nerve injury
+- Median neuropathy
+- Mediastinal adenopathy
+- Mediastinal mass
+- Mediastinitis
+- Medullary adenocarcinoma
+- Medullary sponge kidney
+- Medulloblastoma
+- Melanoma - amelanotic
+- Melanoma - malignant
+- Melanoma - nodular
+- Melanoma in-situ
+- Melanosis
+- Melanosis coli
+- Melasma
+- Melena
+- Meningeal carcinomatosis
+- Meningeal tumor
+- Meningioma
+- Meningismus
+- Meningitis
+- Meningitis - amebic
+- Meningitis - aseptic
+- Meningitis - fungal
+- Meningitis tuberculosis
+- Meningocele
+- Meningococcemia
+- Meniscus tear
+- Menorrhagia
+- Menstrual cycle - irregular
+- Menstrual spotting
+- Mental health problem
+- Mental retardation
+- Mental state - altered
+- Mesenteric vascular insufficiency
+- Mesonephroma - benign
+- Mesonephroma - malignant
+- Mesothelioma - malignant
+- Metaplasia - myeloid
+- Metastatic adenocarcinoma
+- Metatarsal bone - plantar flexed
+- Metatypical carcinoma
+- Methemoglobinemia
+- Methicillin-resistant Staph aureus (MRSA) colonization
+- Methicillin-resistant Staph aureus (MRSA) infection
+- Microcephaly
+- Micrognathia
+- Migraine
+- Miliaria
+- Milium cyst
+- Milk-Alkali syndrome
+- Miosis
+- Mitral insufficiency
+- Mitral stenosis
+- Mitral valve disorder
+- Mixed germ cell tumor - malignant
+- Mixed Mullerian tumor
+- Molar tooth - impacted
+- Molluscum contagiosum
+- Monoclonal gammopathy
+- Monocytic leukemia
+- Mononeuritis multiplex
+- Morbid obesity
+- Morphea
+- Morton's neuroma
+- Motion sickness
+- Motor vehicle accident
+- Mountain sickness
+- Mouth sores
+- Mucinosis
+- Mucinous cystadenoma
+- Mucocutaneous leishmaniasis
+- Mucopolysaccharidosis
+- Mucormycosis
+- Multiple myeloma
+- Multiple sclerosis
+- Mumps
+- Mural thrombus
+- Muscle cramps
+- Muscle disease
+- Muscle rupture
+- Muscle spasm
+- Muscle strain
+- Muscle weakness
+- Muscular dystrophy
+- Myalgia
+- Myasthenia gravis
+- Mycosis fungoides
+- Myelodysplastic syndrome
+- Myelofibrosis
+- Myeloid hyperplasia
+- Myeloid hypoplasia
+- Myeloid leukemia - acute
+- Myeloid maturation arrest
+- Myelolipoma
+- Myelomeningocele
+- Myeloproliferative disorder
+- Myocardial contusion
+- Myocardial infarction
+- Myocardial infarction - acute
+- Myocarditis
+- Myoclonus
+- Myopia
+- Myositis
+- Myotonia
+- Myringitis
+- Myxedema
+- Myxoma
+- Myxosarcoma
+- Nabothian cyst
+- Nail disease
+- Nail dystrophy - acquired
+- Nail dystrophy - congenital
+- Narcolepsy
+- Narcotic abuse
+- Nasal disorder
+- Nasal fracture
+- Nasal obstruction
+- Nasal pack
+- Nasal polyp
+- Nasal septum - deviated
+- Nasolacrimal duct obstruction
+- Nasopharyngeal carcinoma
+- Nausea
+- Near Drowning-Fresh Water
+- Neck mass
+- Neck pain
+- Neck stiffness
+- Necrobiosis lipoidica
+- Necrosis - papillary
+- Necrotizing enterocolitis
+- Neoplasia
+- Neoplasm - benign
+- Nephritis - lupus
+- Nephritis - sodium losing
+- Nephroblastoma
+- Nephropathy - IgA
+- Nephropathy - obstructive
+- Nephropathy - urate
+- Nephrosclerosis
+- Nephrosclerosis - arteriolar
+- Nephrotic syndrome
+- Nerve entrapment syndrome
+- Nerve laceration
+- Neuralgia
+- Neurilemmoma
+- Neuroblastoma
+- Neurodermatitis
+- Neurofibroma
+- Neurofibroma - plexiform
+- Neurofibromatosis
+- Neuroleptic malignant syndrome
+- Neurologic defect
+- Neuroma
+- Neuroma - traumatic
+- Neuronevus
+- Neuropathy
+- Neuropathy - diabetic
+- Neurosis
+- Neurosyphilis
+- Neurovascular syndrome
+- Neutropenia
+- Neutropenic sepsis
+- Nevus
+- Nevus - combined
+- Nevus - compound
+- Nevus - epidermal
+- Nevus - halo
+- Nevus - intradermal
+- Nevus - junctional
+- Nevus - pigmented
+- Nevus - sebaceus
+- Nevus - spindle cell
+- Night sweats
+- Night terrors
+- Nipple discharge
+- Nocturia
+- Nocturnal dyspnea
+- Nodular glomerulosclerosis
+- Nodular sclerosis
+- Non-Hodgkin's lymphoma
+- Non-Q-wave infarct
+- Nonalcoholic steatohepatitis (NASH)
+- Nose stuffy
+- Numbness
+- Nystagmus
+- Obesity
+- Obsessive-compulsive disorder
+- Obstructive apnea
+- Ocular herpes zoster
+- Ocular histoplasmosis
+- Oculomotor nerve palsy
+- Odontogenic infection
+- Odontogenic tumor
+- Odontogenic tumor - malignant
+- Odontoid fracture
+- Oligodendroglioma
+- Oligohydramnios
+- Oligospermia
+- Oliguria
+- Olivopontocerebellar atrophy
+- Omphalocele
+- Onchocerciasis
+- Onychogryphosis
+- Onycholysis
+- Onychomycosis
+- Onychophosis
+- Oppositional defiant disorder (ODD)
+- Optic atrophy
+- Optic nerve injury
+- Optic neuritis
+- Oral candidiasis
+- Oral ulcer
+- Orbital blowout fracture
+- Orbital cellulitis
+- Orchitis
+- Organic brain syndrome
+- Osgood-Schlatter disease
+- Osteitis fibrosa
+- Osteoarthritis
+- Osteoblastoma
+- Osteochondritis
+- Osteochondritis dissecans
+- Osteochondroma
+- Osteochondromatosis
+- Osteogenesis imperfecta
+- Osteogenic sarcoma
+- Osteoma
+- Osteomalacia
+- Osteomyelitis
+- Osteomyelitis - chronic
+- Osteomyelitis - tuberculosis
+- Osteopenia
+- Osteoporosis
+- Otitis externa
+- Otitis media
+- Otitis media - acute
+- Otitis media - chronic
+- Otitis media - serous
+- Otomycosis
+- Otorrhagia
+- Otorrhea
+- Otosclerosis
+- Otosyphilis
+- Ovarian abscess
+- Ovarian cancer
+- Ovarian cyst torsion
+- Ovarian dysfunction
+- Ovarian failure
+- Ovarian torsion
+- Ovaries - cystic
+- Ovaries - polycystic
+- Overweight
+- Oxygen toxicity
+- Paget's disease of bone
+- Paget's disease of breast
+- Paget's disease of skin
+- Pain - neuropathic
+- Palate edema
+- Pallor
+- Palpitations
+- Pancreas - large
+- Pancreas disorder
+- Pancreatic calcification
+- Pancreatic cancer
+- Pancreatic cholera syndrome
+- Pancreatic duct - dilated
+- Pancreatic fistula
+- Pancreatic insufficiency
+- Pancreatic mass
+- Pancreatic pseudocyst
+- Pancreatitis - acute
+- Pancreatitis - chronic
+- Panic attack
+- Panic disorder
+- Panniculitis
+- Pap smear - abnormal
+- Papillary adenocarcinoma
+- Papilledema
+- Paraganglioma
+- Paraganglioma - malignant
+- Parakeratosis
+- Paralyzed diaphragm
+- Parapharyngeal abscess
+- Paraphimosis
+- Parapsoriasis
+- Parasite disease
+- Parasitic infection
+- Parathyroid adenoma
+- Paresthesia
+- Parkinsons
+- Paronychia
+- Paronychia - chronic
+- Paronychia toe
+- Parotitis
+- Paroxysmal nocturnal hemoglobinuria
+- Patella tendinitis/bursitis
+- Patellar tendon rupture
+- Patent ductus arteriosus
+- Pectus excavatum
+- Pediatric Autoimmune Neuropsychiatric Disorders Associated with Streptococcal infections
+- Pediculosis
+- Pediculosis capitis
+- Pediculosis corporis
+- Pellagra
+- Pelvic fracture
+- Pelvic inflammatory disease
+- Pelvic mass
+- Pelvic pain
+- Pemphigoid gestationis
+- Pemphigus
+- Pemphigus erythematosus
+- Pemphigus foliaceus
+- Pemphigus vegetans
+- Pemphigus vulgaris
+- Penile adhesion
+- Penile discharge
+- Penile ulcer
+- Penis disorder
+- Peptic ulcer
+- Peptic ulcer - acute
+- Peptic ulcer - perforation
+- Perforated colon
+- Perforated viscus
+- Pericardial effusion
+- Pericardial tamponade
+- Pericarditis
+- Pericarditis - acute
+- Pericarditis - constrictive
+- Perinephric abscess
+- Periodonitis - acute
+- Periodontal abscess
+- Periodontal disease
+- Periodontitis - apical
+- Periodontitis - chronic
+- Perioral dermatitis
+- Periostitis
+- Peripheral neuropathy
+- Peripheral vascular disease
+- Perirectal abscess
+- Peritoneal dialysis
+- Peritoneal extravasation
+- Peritoneal metastases
+- Peritonitis
+- Peritonitis - spontaneous bacterial
+- Perleche
+- Personality disorder
+- Personality disorder - paranoid
+- Pertussis
+- Petechiae
+- Peyronie's disease
+- Pharyngeal dysphagia
+- Pharyngeal erythema
+- Pharyngeal exudates
+- Pharyngeal ulcer
+- Pharyngitis
+- Phenylketonuria (PKU)
+- Phenytoin toxicity
+- Pheochromocytoma
+- Pheochromocytoma - malignant
+- Phimosis
+- Phlebosclerosis
+- Photodermatitis
+- Photophobia
+- Pickwickian syndrome
+- Pigmentation
+- Pigmented villonodular synovitis
+- Pilar cyst
+- Pilar tumor
+- Pilomatrixoma
+- Pilonidal cyst
+- Pilonidal dimple
+- Pinguecula
+- Pitted keratolysis
+- Pituitary adenoma
+- Pituitary tumor
+- Pityriasis
+- Pityriasis alba
+- Pityriasis capitis
+- Pityriasis lichenoides chronica
+- Pityriasis rosea
+- Pityriasis rubra pilaris
+- Placenta previa
+- Plague
+- Plantar fasciitis
+- Plasma cell dyscrasia
+- Plasma cell myeloma
+- Plasmacytoma
+- Platelet disorder
+- Platybasia
+- Pleural effusion
+- Pleurisy
+- Pleuritic pain
+- Pneumatocele
+- Pneumocephalus
+- Pneumoconiosis
+- Pneumocystis carinii pneumonia (PCP)
+- Pneumomediastinum
+- Pneumonia
+- Pneumonia - aspiration
+- Pneumonia - bronchial
+- Pneumonia - eosinophilic
+- Pneumonia - interstitial
+- Pneumonia - lipoid
+- Pneumonia - lobar
+- Pneumonia - nosocomial
+- Pneumonia - resolved
+- Pneumothorax
+- Poikiloderma
+- Poikiloderma atrophicans
+- Poison ivy
+- Poliomyelitis
+- Polyarteritis
+- Polyarthritis
+- Polychondritis
+- Polycystic kidney
+- Polycythemia - secondary
+- Polycythemia vera
+- Polydipsia
+- Polyhydramnios
+- Polymorphous light eruption
+- Polymyalgia rheumatica
+- Polymyositis
+- Polyp - adenomatous
+- Polyp - hyperplastic
+- Polyp - inflammatory
+- Polyp - juvenile
+- Polyphagia
+- Polyradiculoneuropathy
+- Polyuria
+- Porokeratosis
+- Porphyria
+- Porphyria cutanea tarda
+- Portal hypertension
+- Portal vein thrombosis
+- Post nasal drip
+- Post-traumatic stress disorder (PTSD)
+- Postconcussion syndrome
+- Precocious puberty
+- Preeclampsia
+- Pregnancy - ectopic
+- Pregnant
+- Premature ejaculation
+- Premature ventricular contractions
+- Prematurity
+- Presbycusis
+- Presbyopia
+- Previous surgery
+- Priapism
+- Prinzmetal's angina
+- Proctitis
+- Prolymphocytic leukemia
+- Prostate - large
+- Prostate calculus
+- Prostate cancer
+- Prostate disorder
+- Prostatic nodule
+- Prostatitis
+- Proteinuria
+- Prothrombin time increased
+- Prurigo
+- Prurigo nodularis
+- Prurigo of pregnancy
+- Pruritus
+- Pruritus ani
+- Pruritus genitalia
+- Pseudoaneurysm
+- Pseudobulbar palsy
+- Pseudoepitheliomatous hyperplasia
+- Pseudogout
+- Pseudohypoparathyroidism
+- Pseudomembranous enterocolitis
+- Pseudomyxoma peritonei
+- Pseudophakia
+- Pseudopolyp
+- Pseudotumor cerebri
+- Pseudoxanthoma elasticum
+- Psoriasis
+- Psoriatic erythroderma
+- Psychosis
+- Psychosis - acute toxic
+- Psychosis - atypical
+- Psychosomatic disease
+- Pterygium
+- Ptosis
+- Pubic lice
+- Pulmonary abscess
+- Pulmonary artery - large
+- Pulmonary bullae
+- Pulmonary disease
+- Pulmonary edema
+- Pulmonary embolism
+- Pulmonary emphysema - interstitial
+- Pulmonary fibrosis - interstitial
+- Pulmonary hypertension
+- Pulmonary hypertrophic osteoarthropathy
+- Pulmonary infarction
+- Pulmonary mass
+- Pulmonary metastases
+- Pulmonary valve disorder
+- Pulmonary vein congestion
+- Pulmonary volume loss
+- Pulmonic insufficiency
+- Pulmonic stenosis
+- Pulpal necrosis
+- Pulpitis
+- Purpura
+- Purpura simplex
+- Pustules
+- Pustulosis palmaris et plantaris
+- Pyelonephritis
+- Pyelonephritis - acute
+- Pyelonephritis - chronic
+- Pyloric obstruction
+- Pyloric stenosis
+- Pyoderma
+- Pyoderma gangrenosum
+- Pyogenic granuloma
+- Pyorrhea
+- Pyuria
+- Q fever
+- Quadriplegia
+- Queyrat's erythroplasia
+- Rabies
+- Radial head subluxation
+- Radial neuropathy
+- Radiation exposure history
+- Radiation injury
+- Radiculopathy
+- Radius fracture
+- Radius/ulna fracture
+- Rash
+- Rash - papular
+- Raynaud's phenomenon
+- Reactive airway disease
+- Rectal bleeding
+- Rectal pain
+- Rectal polyp
+- Rectal prolapse
+- Rectal stricture
+- Rectovaginal fistula
+- Refractive error
+- Reiter's syndrome
+- Renal abnormality - congenital
+- Renal abscess
+- Renal artery stenosis
+- Renal cancer
+- Renal cell adenocarcinoma
+- Renal colic
+- Renal cyst
+- Renal cyst - acquired
+- Renal disease - hypertensive
+- Renal disease - pregnancy associated
+- Renal failure - acute
+- Renal failure - chronic
+- Renal infarction
+- Renal insufficiency - chronic
+- Renal mass
+- Renal obstruction
+- Renal osteodystrophy
+- Renal rupture
+- Renal stone
+- Renal transplant rejection
+- Renal trauma
+- Renal tuberculosis
+- Renal vein thrombosis
+- Renovascular hypertension
+- Respiratory acidosis
+- Respiratory arrest
+- Respiratory failure
+- Respiratoy syncytial virus (RSV) infection
+- Restless legs
+- Retardation - psychomotor
+- Retinal central artery occlusion
+- Retinal central vein occlusion
+- Retinal detachment
+- Retinitis pigmentosa
+- Retinoblastoma
+- Retinopathy - diabetic
+- Retinopathy - hypertensive
+- Retinopathy - prematurity
+- Retinopathy - proliferative
+- Retinopathy - proliferative diabetic
+- Retroperitoneal abscess
+- Retroperitoneal bleeding
+- Retroperitoneal extravasation
+- Retroperitoneal fibrosis
+- Retroperitoneal mass
+- Retropharyngeal abscess
+- Reye's syndrome
+- Rhabdomyolysis
+- Rhabdomyoma
+- Rhabdomyosarcoma
+- Rhabdomyosarcoma - alveolar
+- Rhabdomyosarcoma - pleomorphic
+- Rheumatic fever
+- Rheumatic fever history
+- Rheumatoid arthritis
+- Rheumatoid nodule
+- Rhinitis - allergic
+- Rhinitis - chronic
+- Rhinorrhea
+- Rhytids
+- Rib fracture
+- Rickets
+- Riedel's thyroiditis
+- Rieger syndrome
+- Right heart disease
+- Rocky Mountain spotted fever
+- Rosacea
+- Roseola
+- Rotator cuff tear
+- Rotaviral diarrhea
+- Rubella syndrome
+- Sacroiliac sprain
+- Sacroilitis
+- Salivary duct stone
+- Salmonella enteritidis
+- Salmonella infection
+- Sarcoidosis
+- Sarcoma
+- Sarcoma - myeloid
+- Sarcoma - synovial
+- Scabies
+- Scapula fracture
+- Scar
+- Scar - hyperplastic
+- Scar - keloid
+- Scarlet fever
+- Schizoaffective disorder
+- Schizophrenia
+- Schizophrenia - paranoid
+- Schizophrenic disorder paranoid
+- Schizotypal personality
+- Sciatica
+- Scleritis
+- Scleroderma
+- Scoliosis
+- Scurvy
+- Sebaceous hyperplasia
+- Seborrhea
+- Seizure - electrographic
+- Seizure - febrile
+- Seizure - grand mal
+- Seizure - new onset
+- Seizure disorder
+- Seizures - complex partial
+- Seminoma
+- Seminoma - anaplastic
+- Senile lentigo
+- Senile purpura
+- Senility
+- Sensory defect
+- Sepsis
+- Serous cystadenocarcinoma
+- Sertoli-cell-only syndrome
+- Sertoli-Leydig cell tumor
+- Severe combined immunodeficiency (SCID)
+- Sexual abuse
+- Sexual assault
+- Sexual dysfunction
+- Sheehan's syndrome
+- Shigella infection
+- Shigellosis
+- Shin splints
+- Shock
+- Short stature
+- Shoulder dislocation
+- Shoulder dystocia
+- Shoulder instability
+- Shoulder or upper arm injury
+- Shoulder pain
+- Shoulder sprain
+- Shoulder strain
+- Sialadenitis
+- Sickle cell anemia
+- Sickle cell crisis
+- Sickle cell trait
+- Signet ring cell adenocarcinoma
+- Silicosis
+- Sinoatrial block
+- Sinus arrhythmia
+- Sinus clouding
+- Sinus disorder
+- Sinus mucosa thickened
+- Sinus tenderness
+- Sinusitis
+- Sinusitis - acute
+- Sinusitis - chronic
+- Situs inversus
+- Sjögren's syndrome
+- Skin - dry
+- Skin appendage adenoma
+- Skin cancer
+- Skin changes - atrophic
+- Skin condition - hypertrophic
+- Skin disorder
+- Skin eruption - pigmented purpuric
+- Skin lesion
+- Skin mass
+- Skin neoplasm - uncertain behavior
+- Skin pain - psychogenic
+- Skin tag
+- Skin ulcer
+- Skull fracture
+- Sleep apnea
+- Slipped capital femoral epiphysis
+- Small bowel - dilated
+- Small bowel abnormality
+- Small bowel ischemia
+- Small bowel obstruction
+- Small bowel stricture
+- Small cell carcinoma
+- Small for gestational age
+- Smallpox
+- Smoke inhalation injury
+- Sneezing
+- Social phobia
+- Soft tissue neoplasm - malignant
+- Soft tissue neoplasm - uncertain behavior
+- Solar elastosis
+- Somnolence
+- Spastic perineum syndrome
+- Speech disorder
+- Spermatocele
+- Spermatogenic arrest
+- Spermatogenic granuloma
+- Spherocytosis
+- Spider angioma
+- Spina bifida
+- Spinal cord compression - extrinsic
+- Spinal cord lesion
+- Spinal cord mass
+- Spinal cord transection
+- Spinal epidural abscess
+- Spinal nerve compression
+- Spinal stenosis
+- Spine disorder
+- Splenic abscess
+- Splenic infarction
+- Splenic rupture
+- Splenomegaly
+- Spondylolisthesis
+- Spontaneous abortion
+- Sprain
+- Sprue
+- Sputum production
+- Squamous cell papilloma
+- Squamous cell skin cancer
+- Stab wound
+- Status epilepticus
+- Steatocystoma multiplex
+- Steatorrhea
+- Stiffness
+- Stomatitis
+- Stool - heme positive
+- Strabismus
+- Streptococcal pharyngits
+- Stress fracture
+- Striae
+- Stridor
+- Stroke
+- Sturge-Weber syndrome
+- Stuttering
+- Subarachnoid hemorrhage
+- Subcorneal pustulosis
+- Subcutaneous nodules
+- Subdural empyema
+- Subdural hematoma
+- Submandibular space abscess
+- Subphrenic abscess
+- Subungal hematoma
+- Suicidal ideation
+- Suicide attempt
+- Sulfhemoglobinemia
+- Sunburn
+- Superficial phlebitis
+- Superficial spreading melanoma
+- Superficial vein thrombosis
+- Superior sagittal sinus thrombosis
+- Suprapubic pain
+- Suspected child abuse
+- Sweets syndrome
+- Sympathetic dystrophy - reflex
+- Syncope
+- Syndactyly
+- Syndrome of inappropriate vasopressin secretion (SIADH)
+- Synovitis
+- Syringoma
+- Syringomyelia
+- Systemic lupus erythematosus
+- Tachybrady syndrome
+- Tachycardia
+- Takayasu's arteritis
+- Talus fracture
+- Tardive dyskinesia
+- Tarsal fracture
+- Tattoo
+- Teeth ankylosis
+- Telangiectasia
+- Telogen effluvium
+- Temporal arteritis
+- Temporomandibular arthritis
+- Temporomandibular joint syndrome (TMJ)
+- Tenderness - rebound
+- Tendon injury
+- Tendonitis
+- Tenesmus
+- Tenosynovitis
+- Teratoma - benign cystic
+- Teratoma - malignant
+- Testicles - large
+- Testicular cancer
+- Testicular mass
+- Testicular pain
+- Testicular torsion
+- Testis - undescended
+- Tetralogy of Fallot (TOF)
+- Thalamic hemorrhage
+- Thalassemia
+- Thiamine deficiency
+- Thoracic outlet obstruction
+- Thoracic spondylosis
+- Thoracic surgery
+- Thoracic vertebra fracture
+- Three vessel coronary artery disease
+- Throat cancer
+- Throat hemorrhage
+- Throat mass
+- Throat pain
+- Thrombocytopenia
+- Thrombocytosis
+- Thrombotic thrombocytopenic purpura
+- Thymoma
+- Thyroglossal cyst
+- Thyroid abnormality other
+- Thyroid adenoma
+- Thyroid bruit
+- Thyroid cancer
+- Thyroid cyst
+- Thyroid nodule
+- Thyroid nodule - cold
+- Thyroid nodule - hot
+- Tibia fracture
+- Tibia/fibula fracture
+- Tibial plateau fracture
+- Tic - motor
+- Tick bite
+- Tick-borne relapsing fever
+- Tietze's disease
+- Tinea capitis
+- Tinea corporis
+- Tinea cruris
+- Tinea pedis
+- Tinea versicolor
+- Tinnitus
+- Tobacco chewer
+- Toe dislocation
+- Toe fracture
+- Toe pain
+- Toe sprain
+- Toe strain
+- Tongue - coated
+- Tongue - red
+- Tongue pain
+- Tonsillar abscess
+- Tonsillitis - acute
+- Tonsillitis - chronic
+- Tonsils - large
+- Tooth - impacted
+- Tooth abscess
+- Tooth fracture
+- Tooth loss
+- Tooth luxation
+- Toothache
+- Tophus
+- Torsades de pointes
+- Torticollis
+- Total anomalous pulmonary venous return (TAPVR)
+- Tourette syndrome
+- Toxic epidermal necrolysis
+- Toxic shock syndrome
+- Toxicity - alcohol
+- Toxicity - digitalis
+- Toxoplasmosis
+- Tracheal stenosis
+- Tracheoesophageal fistula
+- Tracheomalacia
+- Transfusion reaction
+- Transient ischemic attack
+- Transitional cell papilloma
+- Transplant rejection
+- Transposition of the great arteries (TGA)
+- Trauma - minor
+- Travelers' diarrhea
+- Tremor
+- Trichiasis
+- Trichinosis
+- Trichoepithelioma
+- Trichomycosis axillaris
+- Trichotillomania
+- Tricuspid insufficiency
+- Tricuspid stenosis
+- Tricuspid valve disorder
+- Trigeminal neuralgia
+- Trigger finger
+- Trochlear nerve palsy
+- Tropical sprue
+- Truncus arteriosus (TA)
+- Tuberculosis - active
+- Tuberculosis - inactive
+- Tuberculosis - miliary
+- Tuberculosis exposure
+- Tuberculosis skin test (PPD) reactive
+- Tuberous sclerosis
+- Tubular acidosis
+- Tubular adenocarcinoma
+- Tubular necrosis - acute
+- Turner syndrome
+- Tympanic membrane perforation
+- Tyrosinosis
+- Ulcer - aphthous
+- Ulcer - ischemic
+- Ulna fracture
+- Ulnar nerve injury
+- Ulnar neuropathy
+- Umbilical granuloma
+- Upper gastrointestinal bleeding
+- Upper respiratory infection
+- Uremia
+- Ureter dilated
+- Ureter obstruction
+- Ureter stenosis
+- Ureter stone
+- Ureteral fistula
+- Ureteral perforation
+- Ureteral reflux
+- Ureteritis - cystic
+- Ureterocele
+- Ureteropelvic junction obstruction
+- Urethral caruncle
+- Urethral discharge
+- Urethral diverticulum
+- Urethral obstruction
+- Urethral stone
+- Urethral stricture
+- Urethritis
+- Urethritis - chlamydial
+- Urethritis - chronic
+- Urethritis - nongonococcal
+- Uric acid abnormality
+- Uric acid stone
+- Urinary frequency
+- Urinary hesitation
+- Urinary incontinence
+- Urinary stress incontinence - female
+- Urinary tract infection (UTI)
+- Urinary tract infection recurrent
+- Urine - abnormal
+- Urine retention
+- Urosepsis
+- Urticaria
+- Urticaria - cholinergic
+- Urticaria - chronic
+- Urticaria pigmentosa
+- Uterine bleeding - abnormal
+- Uterine bleeding - dysfunctional
+- Uterine cancer
+- Uterine hemorrhage
+- Uterine prolapse
+- Uterine rupture
+- Uterine sarcoma
+- Uvula - deviated
+- Vaginal bleeding
+- Vaginal cancer
+- Vaginal delivery - spontaneous
+- Vaginal discharge
+- Vaginal itch
+- Vaginal laceration
+- Vaginal odor
+- Vaginal prolapse
+- Vaginitis
+- Vaginitis - allergic
+- Vaginitis - atrophic
+- Vaginosis - bacterial
+- Valvular heart disease
+- Valvulitis - rheumatic
+- Vancomycin resistant enterococcus (VRE) colonization
+- Vancomycin resistant enterococcus (VRE) infection
+- Varicella
+- Varices
+- Varicocele
+- Vascular calcification
+- Vascular hamartoma
+- Vascular malformation
+- Vasculitis
+- Vasculitis - autoimmune
+- Vasculitis - granulomatous
+- Vasculitis - leukocytoclastic
+- Vasovagal attack
+- Velopharyngeal incompetence
+- Venereal disease
+- Venous insufficiency
+- Venous lake
+- Venous obstruction
+- Venous stasis ulcer
+- Ventilator dependent
+- Ventricular aneurysm
+- Ventricular arrhythmia
+- Ventricular fibrillation
+- Ventricular flutter
+- Ventricular septal defect
+- Verruca plana
+- Verruca plantaris
+- Verruca vulgaris
+- Vertebral burst fracture
+- Vertebral collapse
+- Vertebral fracture
+- Vertebrobasilar insufficiency
+- Vertigo
+- Villous adenocarcinoma
+- Viral flu syndrome
+- Viral infection
+- Vision - blurred
+- Vision - diminished
+- Vision disorder
+- Visual field defect
+- Vitamin K deficiency
+- Vitiligo
+- Vitreous hemorrhage
+- Vocal cord palsy
+- Vomiting
+- Vomiting - persistent
+- Von Willebrand's disease
+- Vulva cancer
+- Vulvitis
+- Vulvovaginitis
+- Vulvovaginitis - candidal
+- Warthin's tumor
+- Weber-Christian disease
+- Wegener's granulomatosis
+- Weight loss
+- Weight problem
+- Wernicke's syndrome
+- Wheezing
+- Whiplash injury
+- Whipple's disease
+- White blood cell phagocytosis
+- Wilson's disease
+- Winter itch
+- Wound dehiscence
+- Wound infection - postoperative
+- Wrist dislocation
+- Wrist fracture
+- Wrist pain
+- Wrist sprain
+- Wrist strain
+- Xanthelasma
+- Xanthoma
+- Xerosis
+- Xerostomia
+- Zollinger-Ellison syndrome

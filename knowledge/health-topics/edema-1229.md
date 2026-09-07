@@ -1,0 +1,16 @@
+---
+source: MedlinePlus (National Library of Medicine)
+title: Edema
+published: 01/28/2002
+url: https://medlineplus.gov/edema.html
+jurisdiction: US
+category: health-topics
+---
+
+# Edema
+
+Also called: Dropsy; Swelling.
+
+Edema means swelling caused by fluid in your body's tissues. It usually occurs in the feet, ankles and legs, but it can involve your entire body. Causes of edema include: Eating too much salt Sunburn Heart failure Kidney disease Liver problems from cirrhosis Pregnancy Problems with lymph nodes , especially after mastectomy Some medicines Standing or walking a lot when the weather is warm To keep swelling down, your health care provider may recommend keeping your legs raised when sitting, wearing support stockings, limiting how much salt you eat, or taking a medicine called a diuretic - also called a water pill.
+
+Related MedlinePlus topic groups: Blood, Heart and Circulation; Symptoms.

@@ -1,0 +1,16 @@
+---
+source: MedlinePlus (National Library of Medicine)
+title: Smokeless Tobacco
+published: 05/09/2001
+url: https://medlineplus.gov/smokelesstobacco.html
+jurisdiction: US
+category: health-topics
+---
+
+# Smokeless Tobacco
+
+Also called: Chewing tobacco; Dip; Oral tobacco; Snuff; Spit tobacco.
+
+Many people who chew tobacco or dip snuff think it's safer than smoking . But you don't have to smoke tobacco for it to be dangerous. Chewing or dipping carries risks like: Cancer of the mouth Decay of exposed tooth roots Pulling away of the gums from the teeth White patches or red sores in the mouth that can turn to cancer Recent research shows the dangers of smokeless tobacco may go beyond the mouth. It might also play a role in other cancers, heart disease and stroke. Smokeless tobacco contains more nicotine than cigarettes. Nicotine is a highly addictive drug that makes it hard to stop using tobacco once you start. Having a quit date and a quitting plan can help you stop successfully. NIH: National Institute of Dental and Craniofacial Research
+
+Related MedlinePlus topic groups: Substance Use and Disorders; Mouth and Teeth.

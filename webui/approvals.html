@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Approved Treatment Plans · Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&display=swap" />
+  <style>
+    :root {
+      --bg:#f4f6f9; --surface:#ffffff; --surface-2:#eef2f7; --ink:#14202e; --ink-soft:#4d5b6a;
+      --ink-faint:#7c8a99; --line:#dde3ea; --line-strong:#c3ccd8;
+      --accent:#1f5fa8; --accent-strong:#17497f; --accent-soft:#e6eef7;
+      --ok:#1f7a5a; --ok-soft:#e3f1eb; --warn:#b7791f; --warn-soft:#fbf0dd;
+      --radius:10px; --radius-sm:7px;
+    }
+    * { box-sizing:border-box; }
+    html,body { margin:0; height:100%; }
+    body {
+      font-family:"Hanken Grotesk","Segoe UI",system-ui,sans-serif;
+      background:var(--bg); color:var(--ink); display:flex; flex-direction:column; height:100%;
+    }
+    header {
+      display:flex; align-items:center; gap:.7rem; padding:.7rem 1.1rem;
+      background:var(--surface); border-bottom:1px solid var(--line);
+    }
+    header .mark { color:var(--accent); display:flex; }
+    header h1 { font:600 1.02rem/1 "Source Serif 4",Georgia,serif; margin:0; }
+    header .sub { color:var(--ink-faint); font-size:.78rem; }
+    header .spacer { flex:1; }
+    .ghost {
+      border:1px solid var(--line-strong); background:var(--surface); color:var(--ink-soft);
+      border-radius:var(--radius-sm); padding:.35rem .7rem; font:inherit; font-size:.8rem;
+      font-weight:600; cursor:pointer; text-decoration:none;
+    }
+    .ghost:hover { border-color:var(--accent); color:var(--accent); }
+    main { flex:1; display:grid; grid-template-columns:320px minmax(0,1fr); min-height:0; }
+    .queue { border-right:1px solid var(--line); background:var(--surface); overflow-y:auto; }
+    .queue h2 {
+      margin:0; padding:.8rem 1rem .5rem; font-size:.72rem; font-weight:700;
+      letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint);
+    }
+    .queue ul { list-style:none; margin:0; padding:0 .6rem .8rem; }
+    .queue li { margin-bottom:.35rem; }
+    .queue button {
+      width:100%; text-align:left; border:1px solid var(--line); background:var(--surface);
+      color:var(--ink); border-radius:var(--radius-sm); padding:.55rem .6rem; cursor:pointer; font:inherit;
+    }
+    .queue button:hover, .queue button.active { border-color:var(--accent); background:var(--accent-soft); }
+    .queue .pt { font-weight:600; font-size:.85rem; }
+    .queue .meta { display:block; font-size:.72rem; color:var(--ink-faint); margin-top:.15rem; }
+    .badge {
+      display:inline-block; font-size:.64rem; font-weight:700; text-transform:uppercase;
+      letter-spacing:.05em; padding:.1rem .4rem; border-radius:999px; margin-top:.3rem;
+    }
+    .badge.approved { background:var(--warn-soft); color:var(--warn); }
+    .badge.acknowledged { background:var(--ok-soft); color:var(--ok); }
+    .badge.pending_review { background:#eef2f7; color:var(--ink-soft); }
+    .badge.changes_requested { background:#f8e3e3; color:#c23b3b; }
+    .badge.rejected { background:#f0d9d9; color:#8f2b2b; }
+    .detail { overflow-y:auto; padding:1.4rem clamp(1rem,4vw,2.4rem); }
+    .detail .empty { color:var(--ink-faint); margin-top:3rem; text-align:center; }
+    .plan-head .q { font-size:1.05rem; font-weight:600; }
+    .plan-head .m { font-size:.78rem; color:var(--ink-faint); margin:.2rem 0 1rem; }
+    .doctor-note {
+      background:var(--ok-soft); border:1px solid #bfe0d1; border-radius:var(--radius);
+      padding:.8rem 1rem; margin-bottom:1rem; font-size:.9rem;
+    }
+    .doctor-note h3 { margin:0 0 .3rem; font-size:.74rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ok); }
+    .doctor-note .who { font-size:.76rem; color:var(--ink-faint); margin-top:.3rem; }
+    .prose { background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+      padding:1rem 1.2rem; line-height:1.6; font-size:.92rem; }
+    .prose h2 { font-size:1rem; margin:1.1rem 0 .4rem; color:var(--accent-strong); }
+    .prose h3, .prose h4 { font-size:.9rem; margin:.9rem 0 .3rem; color:var(--accent-strong); }
+    .prose h2:first-child, .prose h3:first-child { margin-top:0; }
+    .prose .crit { color:#c23b3b; font-weight:700; }
+    .prose li.crit, .prose p.crit { color:#c23b3b; background:#f8e3e3; border-left:3px solid #c23b3b; padding:.2rem .5rem; border-radius:4px; }
+    .prose ul,.prose ol { margin:.3rem 0 .6rem 1.2rem; padding:0; }
+    .prose li { margin:.15rem 0; }
+    .prose code { background:var(--surface-2); padding:.05rem .3rem; border-radius:4px; font-size:.85em; }
+    .cite { color:var(--accent); font-weight:600; font-size:.82em; }
+    .sources { margin:1rem 0 0; font-size:.8rem; }
+    .sources h3 { font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-faint); margin:0 0 .3rem; }
+    .sources ol { margin:0 0 0 1.2rem; padding:0; color:var(--ink-soft); }
+    .sources a { color:var(--accent); }
+    .review { margin-top:1.3rem; background:var(--surface); border:1px solid var(--line);
+      border-radius:var(--radius); padding:1rem 1.2rem; }
+    .review h3 { margin:0 0 .5rem; font-size:.85rem; }
+    textarea {
+      width:100%; min-height:4.5rem; resize:vertical; font:inherit; font-size:.88rem;
+      border:1px solid var(--line-strong); border-radius:var(--radius-sm); padding:.6rem .7rem;
+      background:var(--surface); color:var(--ink);
+    }
+    textarea:focus-visible { outline:2px solid var(--accent); outline-offset:1px; border-color:var(--accent); }
+    .btn { border:none; border-radius:var(--radius-sm); padding:.55rem 1.1rem; font:inherit;
+      font-weight:600; font-size:.86rem; cursor:pointer; background:var(--accent); color:#fff; margin-top:.7rem; }
+    .btn:hover { background:var(--accent-strong); }
+    .btn:disabled { opacity:.55; cursor:progress; }
+    .done { margin-top:1rem; padding:.7rem .9rem; background:var(--ok-soft); border-radius:var(--radius-sm);
+      font-size:.85rem; color:var(--ok); }
+    .flash { margin-top:.6rem; font-size:.82rem; color:var(--accent-strong); }
+    .flash.err { color:#c23b3b; }
+    .thread { margin:1rem 0; border:1px solid var(--line); border-radius:var(--radius); overflow:hidden; }
+    .thread h3 { margin:0; padding:.5rem .8rem; background:var(--surface-2); font-size:.72rem;
+      letter-spacing:.08em; text-transform:uppercase; color:var(--ink-faint); }
+    .thread__item { padding:.55rem .8rem; border-top:1px solid var(--line); font-size:.85rem; }
+    .thread__item:first-of-type { border-top:none; }
+    .thread__who { font-weight:600; font-size:.76rem; }
+    .thread__who.doctor { color:var(--ok); }
+    .thread__who.admin { color:var(--accent-strong); }
+    .thread__when { color:var(--ink-faint); font-size:.7rem; margin-left:.4rem; }
+    .thread__note { margin-top:.2rem; color:var(--ink-soft); white-space:pre-wrap; }
+    .cmt-edit { font-size:.7rem; color:var(--accent); margin-left:.4rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <span class="mark" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m9 12 2 2 4-4" /><path d="M12 3v6m0 0 4.5 7.8a2 2 0 0 1-1.7 3H9.2a2 2 0 0 1-1.7-3L12 9Z" />
+      </svg>
+    </span>
+    <div>
+      <h1>Approved Treatment Plans</h1>
+      <div class="sub">Admin final review — <span id="whoami">…</span></div>
+    </div>
+    <span class="spacer"></span>
+    <a class="ghost" href="/">← Console</a>
+    <button class="ghost" id="refresh" type="button">Refresh</button>
+    <button class="ghost" id="signout" type="button">Sign out</button>
+  </header>
+
+  <main>
+    <aside class="queue">
+      <h2>Doctor-approved</h2>
+      <ul id="queue"></ul>
+    </aside>
+    <section class="detail" id="detail">
+      <p class="empty">Select a plan on the left.</p>
+    </section>
+  </main>
+
+  <script>
+    const esc = (s) => String(s == null ? "" : s)
+      .replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+
+    const CRIT_CUE = /^(?:[⚠❗🚨]️?\s*)|^\s*\**\s*(?:contraindicat|boxed warning|black[- ]box|do not (?:use|give|co-?administer|combine)|avoid\b|never (?:use|give|combine)|red[- ]flag|life[- ]threatening|fatal\b|serious (?:risk|harm)|danger\b)/i;
+    function md(src) {
+      const inline = (s) => esc(s)
+        .replace(/\*\*([^*]+)\*\*/g,(_m,t)=>CRIT_CUE.test(t)?`<strong class="crit">${t}</strong>`:`<strong>${t}</strong>`)
+        .replace(/`([^`]+)`/g,"<code>$1</code>")
+        .replace(/([⚠❗🚨]️?\s*[^.;\n]*[.;]?)/gu,'<span class="crit">$1</span>')
+        .replace(/\[(\d+(?:\s*,\s*\d+)*)\]/g,'<span class="cite">[$1]</span>');
+      const cc = (t) => CRIT_CUE.test(t) ? ' class="crit"' : "";
+      const lines = String(src||"").replace(/\r/g,"").split("\n");
+      let html="", list=null;
+      const close=()=>{ if(list){ html+=`</${list}>`; list=null; } };
+      for (const raw of lines) {
+        const line = raw.trimEnd();
+        if (!line.trim()) { close(); continue; }
+        let m;
+        if ((m=line.match(/^(#{2,4})\s+(.*)$/))) { close(); const l=Math.min(m[1].length,3); html+=`<h${l}>${inline(m[2])}</h${l}>`; }
+        else if ((m=line.match(/^\s*[-*]\s+(.*)$/))) { if(list!=="ul"){close();list="ul";html+="<ul>";} html+=`<li${cc(m[1])}>${inline(m[1])}</li>`; }
+        else if ((m=line.match(/^\s*\d+\.\s+(.*)$/))) { if(list!=="ol"){close();list="ol";html+="<ol>";} html+=`<li${cc(m[1])}>${inline(m[1])}</li>`; }
+        else { close(); html+=`<p${cc(line)}>${inline(line)}</p>`; }
+      }
+      close();
+      return html;
+    }
+
+    const qEl = document.getElementById("queue");
+    const dEl = document.getElementById("detail");
+    let currentId = null, currentUser = null;
+
+    function comments(list) {
+      const rows = (list || []).map(c => `
+        <div class="thread__item" data-cid="${esc(c.id)}">
+          <span class="thread__who ${esc(c.role)}">${esc(c.by)} (${esc(c.role)})</span>
+          <span class="thread__when">${esc((c.at||"").slice(0,16).replace("T"," "))}${c.edited_at ? " · edited" : ""}</span>
+          ${c.by === currentUser ? ` <a href="#" class="cmt-edit" data-cid="${esc(c.id)}">edit</a>` : ""}
+          <div class="thread__note cmt-text">${esc(c.text)}</div>
+        </div>`).join("");
+      return `<div class="thread"><h3>Your comments on the doctor's feedback</h3>
+        ${rows || '<div class="thread__item" style="color:var(--ink-faint)">No comments yet.</div>'}
+        <div class="thread__item">
+          <textarea id="newcmt" placeholder="Add a comment on the doctor's feedback — visible to the doctor, read-only for them" style="min-height:3rem"></textarea>
+          <button class="btn" id="addcmt" type="button" style="margin-top:.4rem">Add comment</button>
+        </div>
+      </div>`;
+    }
+
+    function thread(history) {
+      if (!history || !history.length) return "";
+      const rows = history.map(h => `
+        <div class="thread__item">
+          <span class="thread__who ${esc(h.role)}">${esc(h.actor)} (${esc(h.role)})</span>
+          <span class="thread__when">${esc((h.at||"").slice(0,16).replace("T"," "))}</span>
+          — ${esc(h.action)}
+          ${h.note ? `<div class="thread__note">${esc(h.note)}</div>` : ""}
+        </div>`).join("");
+      return `<div class="thread"><h3>Review history</h3>${rows}</div>`;
+    }
+
+    async function api(path, opts) {
+      const res = await fetch(path, opts);
+      if (res.status === 401) { window.location.href = "/"; throw new Error("auth"); }
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw new Error(data.detail || `Request failed (${res.status})`);
+      return data;
+    }
+
+    const LABEL = {
+      pending_review: "awaiting doctor", changes_requested: "changes requested",
+      approved: "approved — needs your review", acknowledged: "finalised",
+      rejected: "rejected by doctor",
+    };
+
+    async function loadQueue() {
+      const data = await api("/api/review/plans?scope=all");
+      const plans = data.plans || [];
+      qEl.innerHTML = "";
+      if (!plans.length) { qEl.innerHTML = `<li style="padding:.4rem .6rem;color:var(--ink-faint);font-size:.82rem">Nothing sent for review yet.</li>`; return; }
+      for (const p of plans) {
+        const li = document.createElement("li");
+        const b = document.createElement("button");
+        if (p.id === currentId) b.className = "active";
+        const stamp = p.reviewed_at
+          ? `by ${esc(p.reviewed_by || "—")} · ${esc((p.reviewed_at||"").slice(0,16).replace("T"," "))}`
+          : `sent ${esc((p.created_at||"").slice(0,16).replace("T"," "))}`;
+        b.innerHTML = `<span class="pt">${esc(p.patient_label)}</span>
+          <span class="meta">${esc(p.query.slice(0,80))}${p.query.length>80?"…":""}</span>
+          <span class="meta">${stamp}</span>
+          <span class="badge ${p.status}">${esc(LABEL[p.status] || p.status)}</span>`;
+        b.addEventListener("click", () => openPlan(p.id));
+        li.appendChild(b);
+        qEl.appendChild(li);
+      }
+    }
+
+    async function openPlan(id) {
+      currentId = id;
+      await loadQueue();
+      const p = await api(`/api/review/plans/${id}`);
+      const srcs = (p.citations || []).map(c =>
+        `<li>${esc(c.title)} — ${esc(c.source)}${c.url ? ` · <a href="${esc(c.url)}" target="_blank" rel="noopener">link</a>` : ""}</li>`
+      ).join("");
+      const reviewed = !!p.reviewed_at;
+      let noteBlock = "";
+      if (p.status === "rejected") {
+        noteBlock = `<div class="doctor-note" style="background:#f0d9d9;border-color:#d9b3b3">
+          <h3 style="color:#8f2b2b">Plan rejected by the doctor</h3>
+          <div>${p.doctor_notes ? esc(p.doctor_notes) : "<em>No reason recorded.</em>"}</div>
+          <div class="who">${esc(p.reviewed_by || "—")} · ${esc((p.reviewed_at||"").slice(0,16).replace("T"," "))} — this plan will not proceed. Generate a new one in the console if needed.</div>
+        </div>`;
+      } else if (p.status === "changes_requested") {
+        noteBlock = `<div class="doctor-note" style="background:#f8e3e3;border-color:#e6bcbc">
+          <h3 style="color:#c23b3b">Changes requested by the doctor</h3>
+          <div>${p.doctor_notes ? esc(p.doctor_notes) : "<em>No specific notes were left.</em>"}</div>
+          <div class="who">${esc(p.reviewed_by || "—")} · ${esc((p.reviewed_at||"").slice(0,16).replace("T"," "))}</div>
+        </div>`;
+      } else if (reviewed) {
+        noteBlock = `<div class="doctor-note">
+          <h3>Doctor review</h3>
+          <div>${p.doctor_notes ? esc(p.doctor_notes) : "<em>Approved with no additional notes.</em>"}</div>
+          <div class="who">Approved by ${esc(p.reviewed_by || "—")} · ${esc((p.reviewed_at||"").slice(0,16).replace("T"," "))}</div>
+        </div>`;
+      } else {
+        noteBlock = `<div class="doctor-note" style="background:#eef2f7;border-color:#d7dde6">
+          <h3 style="color:var(--ink-soft)">Awaiting doctor review</h3>
+          <div class="who">Sent ${esc((p.created_at||"").slice(0,16).replace("T"," "))} — not yet actioned by a doctor.</div>
+        </div>`;
+      }
+      dEl.innerHTML = `
+        <div class="plan-head">
+          <div class="q">${esc(p.query)}</div>
+          <div class="m">${esc(p.patient_label || "no patient linked")} · generated ${esc(p.created_at.slice(0,16).replace("T"," "))} by ${esc(p.created_by)}</div>
+        </div>
+        ${noteBlock}
+        ${p.reviewed_at ? comments(p.comments) : ""}
+        <div class="prose">${md(p.answer_markdown)}</div>
+        ${srcs ? `<div class="sources"><h3>Cited sources</h3><ol>${srcs}</ol></div>` : ""}
+        ${thread(p.history)}
+        <div class="review">
+          ${p.status === "acknowledged" ? `
+            <h3>Final review complete</h3>
+            <div class="done">Acknowledged by ${esc(p.acknowledged_by)} · ${esc((p.acknowledged_at||"").slice(0,16).replace("T"," "))}${p.admin_note ? `<br>Note: ${esc(p.admin_note)}` : ""}</div>
+          ` : p.status === "approved" ? `
+            <h3>Admin final review</h3>
+            <textarea id="anote" placeholder="Optional note on your final review">${esc(p.admin_note || "")}</textarea>
+            <button class="btn" id="ack" type="button">Acknowledge &amp; finalize</button>
+            <div class="flash" id="flash"></div>
+          ` : p.status === "changes_requested" ? `
+            <h3>Respond to the doctor</h3>
+            <textarea id="acomment" placeholder="Your reply — what you changed, or why the plan stands. Sending this puts the plan back in the doctor's queue for approval."></textarea>
+            <button class="btn" id="respond" type="button">Send back to doctor for approval</button>
+            <div class="flash" id="flash"></div>
+          ` : p.status === "rejected" ? `
+            <h3>Rejected</h3>
+            <div class="done" style="background:#f0d9d9;color:#8f2b2b">The doctor rejected this plan — no further action. See the reason above.</div>
+          ` : `
+            <h3>Admin final review</h3>
+            <div class="done" style="background:#eef2f7;color:var(--ink-soft)">This plan is back with the doctor for approval.</div>
+          `}
+        </div>`;
+      const ackBtn = document.getElementById("ack");
+      if (ackBtn) ackBtn.addEventListener("click", finalize);
+      const respBtn = document.getElementById("respond");
+      if (respBtn) respBtn.addEventListener("click", respond);
+      wireComments();
+    }
+
+    function wireComments() {
+      const add = document.getElementById("addcmt");
+      if (add) add.addEventListener("click", async () => {
+        const text = document.getElementById("newcmt").value.trim();
+        if (!text) return;
+        add.disabled = true;
+        try {
+          await api(`/api/review/plans/${currentId}/comment`, {
+            method: "POST", headers: { "content-type": "application/json" },
+            body: JSON.stringify({ text }),
+          });
+          await openPlan(currentId);
+        } catch (e) { add.disabled = false; alert(e.message || "Failed to add comment."); }
+      });
+      dEl.querySelectorAll(".cmt-edit").forEach(link => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const item = link.closest("[data-cid]");
+          const cid = link.dataset.cid;
+          const cur = item.querySelector(".cmt-text").textContent;
+          item.querySelector(".cmt-text").outerHTML = `
+            <textarea class="cmt-edit-box" style="min-height:3rem">${esc(cur)}</textarea>
+            <button class="btn cmt-save" type="button" style="margin-top:.4rem">Save</button>`;
+          item.querySelector(".cmt-save").addEventListener("click", async () => {
+            const text = item.querySelector(".cmt-edit-box").value.trim();
+            if (!text) return;
+            try {
+              await api(`/api/review/plans/${currentId}/comment/${cid}`, {
+                method: "POST", headers: { "content-type": "application/json" },
+                body: JSON.stringify({ text }),
+              });
+              await openPlan(currentId);
+            } catch (err) { alert(err.message || "Failed to update comment."); }
+          });
+        });
+      });
+    }
+
+    async function respond() {
+      const comment = document.getElementById("acomment").value.trim();
+      const flash = document.getElementById("flash");
+      const btn = document.getElementById("respond");
+      if (!comment) { flash.className = "flash err"; flash.textContent = "Add a comment before sending it back."; return; }
+      btn.disabled = true; flash.className = "flash"; flash.textContent = "Sending…";
+      try {
+        await api(`/api/review/plans/${currentId}/respond`, {
+          method: "POST", headers: { "content-type": "application/json" },
+          body: JSON.stringify({ comment }),
+        });
+        flash.textContent = "Sent back to the doctor for approval.";
+        await openPlan(currentId);
+      } catch (e) {
+        flash.className = "flash err"; flash.textContent = e.message || "Failed.";
+        btn.disabled = false;
+      }
+    }
+
+    async function finalize() {
+      const note = document.getElementById("anote").value.trim();
+      const flash = document.getElementById("flash");
+      const btn = document.getElementById("ack");
+      btn.disabled = true; flash.className = "flash"; flash.textContent = "Saving…";
+      try {
+        await api(`/api/review/plans/${currentId}/acknowledge`, {
+          method: "POST", headers: { "content-type": "application/json" },
+          body: JSON.stringify({ note }),
+        });
+        flash.textContent = "Finalized.";
+        await openPlan(currentId);
+      } catch (e) {
+        flash.className = "flash err"; flash.textContent = e.message || "Failed.";
+        btn.disabled = false;
+      }
+    }
+
+    document.getElementById("refresh").addEventListener("click", loadQueue);
+    document.getElementById("signout").addEventListener("click", async () => {
+      try { await fetch("/api/logout", { method: "POST" }); } catch (_) {}
+      window.location.href = "/";
+    });
+
+    (async () => {
+      try {
+        const me = await api("/api/me");
+        currentUser = me.user;
+        document.getElementById("whoami").textContent = me.user;
+        if (me.role !== "admin") { window.location.href = "/"; return; }
+      } catch (_) { return; }
+      loadQueue();
+    })();
+  </script>
+</body>
+</html>

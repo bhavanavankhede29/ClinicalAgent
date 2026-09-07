@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign in · Clinical Agent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" />
+  <style>
+    :root {
+      --bg: #eef2f7; --surface: #ffffff; --ink: #14202e; --ink-soft: #4d5b6a;
+      --line: #dde3ea; --line-strong: #c3ccd8; --accent: #1f5fa8; --accent-strong: #17497f;
+      --critical: #c23b3b; --critical-soft: #f8e3e3;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      display: grid; place-items: center;
+      background: var(--bg); color: var(--ink);
+      font-family: "Hanken Grotesk", "Segoe UI", system-ui, sans-serif;
+      padding: 1.5rem;
+    }
+    .card {
+      width: 100%; max-width: 360px;
+      background: var(--surface); border: 1px solid var(--line);
+      border-radius: 10px; padding: 1.9rem 1.7rem;
+      box-shadow: 0 1px 2px rgba(20,32,46,.06), 0 18px 40px -16px rgba(20,32,46,.18);
+    }
+    .hero {
+      display: block; width: 55%; max-width: 170px; height: auto;
+      margin: 0 auto 1rem; border-radius: 8px;
+    }
+    .brand { display: flex; align-items: center; gap: .55rem; margin-bottom: .3rem; color: var(--accent); }
+    .brand svg { width: 22px; height: 22px; }
+    .brand span {
+      font-family: "Source Serif 4", Georgia, serif; font-weight: 600;
+      font-size: 1.15rem; color: var(--ink); letter-spacing: 0;
+    }
+    p.sub { margin: 0 0 1.4rem; color: var(--ink-soft); font-size: .86rem; }
+    label { display: block; font-size: .78rem; font-weight: 600; color: var(--ink-soft); margin-bottom: .3rem; }
+    input {
+      width: 100%; font: inherit; font-size: .9rem;
+      padding: .55rem .7rem; margin-bottom: 1rem;
+      border: 1px solid var(--line-strong); border-radius: 7px;
+      background: var(--surface); color: var(--ink);
+    }
+    input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; border-color: var(--accent); }
+    button {
+      width: 100%; font: inherit; font-weight: 600; font-size: .9rem;
+      padding: .6rem; border: none; border-radius: 7px;
+      background: var(--accent); color: #fff; cursor: pointer;
+    }
+    button:hover { background: var(--accent-strong); }
+    button:disabled { opacity: .6; cursor: progress; }
+    .err {
+      display: none; margin: 0 0 1rem; padding: .5rem .7rem;
+      background: var(--critical-soft); color: var(--critical);
+      border-radius: 7px; font-size: .82rem;
+    }
+    .err.show { display: block; }
+    .hint { margin: 1.1rem 0 0; font-size: .74rem; color: var(--ink-soft); text-align: center; }
+  </style>
+</head>
+<body>
+  <form class="card" id="login-form">
+    <img class="hero" src="/clinical_agent.png" alt="Clinical Agent" onerror="this.remove()" />
+    <div class="brand">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 3v6m0 0 4.5 7.8a2 2 0 0 1-1.7 3H9.2a2 2 0 0 1-1.7-3L12 9Z" />
+        <path d="M7 3h10" />
+      </svg>
+      <span>Clinical Agent</span>
+    </div>
+    <p class="sub">Sign in to open the console.</p>
+
+    <div class="err" id="err"></div>
+
+    <label for="username">Username</label>
+    <input id="username" name="username" autocomplete="username" autofocus required />
+
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" autocomplete="current-password" required />
+
+    <button type="submit" id="submit">Sign in</button>
+    <p class="hint">For licensed healthcare professionals. Local decision-support tool.<br>
+      Reviewing treatment plans? <a href="/doctor">Doctor portal →</a></p>
+  </form>
+
+  <script>
+    const form = document.getElementById("login-form");
+    const err = document.getElementById("err");
+    const btn = document.getElementById("submit");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      err.classList.remove("show");
+      btn.disabled = true;
+      btn.textContent = "Signing in…";
+      try {
+        const res = await fetch("/api/login", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({
+            username: document.getElementById("username").value,
+            password: document.getElementById("password").value,
+          }),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (res.ok) {
+          // Confirm the session cookie actually stuck before navigating away.
+          const check = await fetch("/api/me", { credentials: "same-origin" });
+          if (check.ok) { window.location.href = "/"; return; }
+          err.textContent = "Signed in, but your browser did not keep the session cookie. "
+            + "Enable cookies and open the app at a consistent address "
+            + "(http://127.0.0.1:8000, not 'localhost').";
+          err.classList.add("show");
+          return;
+        }
+        err.textContent = data.detail || "Sign in failed.";
+        err.classList.add("show");
+      } catch (_) {
+        err.textContent = "Network error — is the server running?";
+        err.classList.add("show");
+      } finally {
+        btn.disabled = false;
+        btn.textContent = "Sign in";
+      }
+    });
+  </script>
+</body>
+</html>

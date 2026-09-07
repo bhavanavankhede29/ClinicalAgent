@@ -1,0 +1,14 @@
+---
+source: MedlinePlus (National Library of Medicine)
+title: Pituitary Disorders
+published: 12/29/1999
+url: https://medlineplus.gov/pituitarydisorders.html
+jurisdiction: US
+category: health-topics
+---
+
+# Pituitary Disorders
+
+Your pituitary gland is a pea-sized gland at the base of your brain. The pituitary is the "master control gland" - it makes hormones that affect growth and the functions of other glands in the body. With pituitary disorders, you often have too much or too little of one of your hormones. Injuries can cause pituitary disorders, but the most common cause is a pituitary tumor .
+
+Related MedlinePlus topic groups: Brain and Nerves; Endocrine System.

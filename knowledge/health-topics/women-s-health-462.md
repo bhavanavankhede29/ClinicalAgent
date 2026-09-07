@@ -1,0 +1,14 @@
+---
+source: MedlinePlus (National Library of Medicine)
+title: Women's Health
+published: 09/09/1999
+url: https://medlineplus.gov/womenshealth.html
+jurisdiction: US
+category: health-topics
+---
+
+# Women's Health
+
+Women have unique health issues. And some of the health issues that affect both men and women can affect women differently. Unique issues include pregnancy , menopause , and conditions of the female organs. Women can have a healthy pregnancy by getting early and regular prenatal care . They should also get recommended breast cancer, cervical cancer , and bone density screenings. Women and men also have many of the same health problems. But these problems can affect women differently. For example: Women are more likely to die following a heart attack than men Women are more likely to show signs of depression and anxiety than men The effects of sexually transmitted infections (STIs) can be more serious in women Osteoarthritis affects more women than men Women are more likely to have urinary tract problems NIH: National Institute of Child Health and Human Development
+
+Related MedlinePlus topic groups: Women; Population Groups.

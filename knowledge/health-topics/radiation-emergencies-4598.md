@@ -1,0 +1,14 @@
+---
+source: MedlinePlus (National Library of Medicine)
+title: Radiation Emergencies
+published: 06/25/2008
+url: https://medlineplus.gov/radiationemergencies.html
+jurisdiction: US
+category: health-topics
+---
+
+# Radiation Emergencies
+
+Radiation is a type of energy. People are exposed to small amounts of radiation every day from sources such as sunlight. A radiation emergency would involve larger amounts of radiation and could be caused by: Dirty bombs - a mix of explosives with radioactive powder Fallout from a nuclear bomb Accidental release from a nuclear reactor or a nuclear weapons plant A lot of radiation over a short period can cause burns or radiation sickness. If the exposure is large enough, it can cause premature aging or even death. Although there are no guarantees of safety during a radiation emergency, you can take actions to protect yourself. You should have a disaster plan . Being prepared can help reduce fear, anxiety and losses. If you do experience a disaster, it is normal to feel stressed. You may need help in finding ways to cope . Centers for Disease Control and Prevention
+
+Related MedlinePlus topic groups: Disasters.

@@ -1,0 +1,14 @@
+---
+source: MedlinePlus (National Library of Medicine)
+title: Puberty
+published: 07/28/2010
+url: https://medlineplus.gov/puberty.html
+jurisdiction: US
+category: health-topics
+---
+
+# Puberty
+
+Puberty is the time in life when a boy or girl becomes sexually mature. It is a process that usually happens between ages 8 and 13 for girls and ages 9 and 14 for boys. It causes physical changes and affects boys and girls differently. In girls: The first sign of puberty is usually breast development. Then hair grows in the pubic area and armpits. Menstruation (or a period) usually happens last. In boys: Puberty usually begins with the testicles and penis getting bigger. Then hair grows in the pubic area and armpits. Muscles grow, the voice deepens, and facial hair develops as puberty continues. Both boys and girls may get acne. They also usually have a growth spurt (a rapid increase in height) that lasts for about 2 or 3 years. This brings them closer to their adult height, which they reach after puberty. NIH: National Institute of Child Health and Human Development
+
+Related MedlinePlus topic groups: Children and Teenagers; Sexual Health Issues.

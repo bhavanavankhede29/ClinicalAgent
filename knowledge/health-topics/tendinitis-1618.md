@@ -1,0 +1,16 @@
+---
+source: MedlinePlus (National Library of Medicine)
+title: Tendinitis
+published: 04/22/2002
+url: https://medlineplus.gov/tendinitis.html
+jurisdiction: US
+category: health-topics
+---
+
+# Tendinitis
+
+Also called: Tendonitis.
+
+Tendons are flexible bands of tissue that connect muscles to bones. They help your muscles move your bones. Tendinitis is the severe swelling of a tendon. Tendinitis usually happens after repeated injury to an area such as the wrist or ankle. It causes pain and soreness around a joint. Some common forms of tendinitis are named after the sports that increase their risk. They include tennis elbow, golfer's elbow, pitcher's shoulder, swimmer's shoulder, and jumper's knee. Doctors diagnose tendinitis with your medical history, a physical exam, and imaging tests. The first step in treatment is to reduce pain and swelling. Rest, wrapping or elevating the affected area, and medicines can help. Ice is helpful for recent, severe injuries. Other treatments include ultrasound, physical therapy, steroid injections, and surgery.
+
+Related MedlinePlus topic groups: Bones, Joints and Muscles.
