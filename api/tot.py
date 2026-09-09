@@ -211,7 +211,7 @@ async def run_tot(req: QueryRequest) -> QueryResponse:
         system=SYSTEM_PROMPT,
         max_tokens=answer_tokens,
     )
-    answer = _text_of(syn) or "_The model returned no text._"
+    answer = _text_of(syn)
     if looks_like_bare_toolcall(answer):
         calls += 1
         syn = await _call_claude(
@@ -229,14 +229,25 @@ async def run_tot(req: QueryRequest) -> QueryResponse:
 
     answer = strip_preamble(answer)
     if not answer or looks_like_bare_toolcall(answer):
-        # The model would not produce prose. Fall back to an organised list of
-        # everything the tree retrieved rather than showing a tool call.
-        from .agent import _evidence_only_answer
-        answer = _evidence_only_answer(req, retr, intro=(
-            "**Automated synthesis was unavailable for this request** — the reasoning "
-            "engine did not return a written answer. The sources gathered across every "
-            "branch are listed below for clinician synthesis."
-        ))
+        # The synthesis step produced nothing usable. If the tree actually
+        # retrieved sources, hand back an organised list of them; if it did not
+        # (e.g. a bare patient name with no chart and no clinical question),
+        # say so plainly instead of showing a placeholder string.
+        if retr.citations:
+            from .agent import _evidence_only_answer
+            answer = _evidence_only_answer(req, retr, intro=(
+                "**Automated synthesis was unavailable for this request** — the reasoning "
+                "engine did not return a written answer. The sources gathered across every "
+                "branch are listed below for clinician synthesis."
+            ))
+        else:
+            answer = (
+                "**Not enough to review.** This request carried no clinical question and "
+                "no patient data the tools could use — only a name. Select a patient with "
+                "a charted problem list and medications, or type what you'd like reviewed "
+                "(a condition, drug, test, or clinical question), then try again.\n\n"
+                "Clinician review required before any patient-impacting action."
+            )
 
     citations, answer = _local_last(retr.citations, answer)
     kept = ", ".join(f"#{s['i']}({s['score']:.0f})" for s in survivors)
